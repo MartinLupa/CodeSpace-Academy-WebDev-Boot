@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello, world!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+
+    <style>
+      .resaltado {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Enlaces internos y externos -->
+    <a href="https://codespaceacademy.com">Ir a Code Space</a>
+    <a href="blog.html" target="_blank">Ir a Blog</a>
+
+    <!-- Espacio en blanco / Linea nueva -->
+    <br />
+
+    <!-- Linea separadora -->
+    <hr />
+
+    <!-- Titulos / Headings -->
+    <h1>Título uno</h1>
+    <h2>Título dos</h2>
+    <h3>Título tres</h3>
+    <h4>Título cuatro</h4>
+    <h5>Título cinco</h5>
+    <h6>Título seis</h6>
+
+    <br />
+    <hr />
+    <br />
+
+    <!-- Párrafos / Paragraphs -->
+    <p>
+      Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos
+      de texto. Lorem Ipsum ha sido el texto de relleno estándar de las
+      industrias desde el año 1500, cuando un impresor (N. del T. persona que se
+      dedica a la imprenta) desconocido usó una galería de textos y los mezcló
+      de tal manera que logró hacer un libro de textos especimen. No sólo
+      sobrevivió 500 años, sino que tambien ingresó como texto de relleno en
+      documentos electrónicos, quedando esencialmente igual al original. Fue
+      popularizado en los 60s con la creación de las hojas "Letraset", las
+      cuales contenian pasajes de Lorem Ipsum, y más recientemente con software
+      de autoedición, como por ejemplo Aldus PageMaker, el cual incluye
+      versiones de Lorem Ipsum.
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident
+      dolorem laboriosam quibusdam doloremque delectus eveniet aliquid corporis.
+      Ipsam nihil consectetur dignissimos? Magnam, quia sequi quae minus
+      voluptatem, nisi obcaecati tempora placeat laudantium voluptatibus vero
+      eos recusandae, neque tempore assumenda! Adipisci officiis omnis ut atque,
+      nesciunt obcaecati nostrum ad nulla in.
+    </p>
+
+    <pre>
+Texto preformateado es 
+    la única etiqueta HTML 
+
+          que respeta el formato y espacios que    le
+
+        demos a mano.
+  </pre
+    >
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      <span class="resaltado">Necessitatibus repellat</span> ullam reiciendis
+      corrupti doloremque id rerum libero doloribus excepturi blanditiis.
+    </p>
+
+    <!-- Contenedores / Containers -->
+
+    <header>
+      <nav>
+        <a href="">Enlace 1</a>
+        <a href="">Enlace 2</a>
+        <a href="">Enlace 3</a>
+      </nav>
+    </header>
+
+    <article>
+      <h1>Título de artículo</h1>
+      <p>Contenido de artículo</p>
+    </article>
+
+    <aside>
+      <p>Menú lateral</p>
+    </aside>
+
+    <div>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium,
+        dignissimos.
+      </p>
+      <span>Calle Larios 5</span>
+    </div>
+
+    <footer>
+      <p>Descripción</p>
+      <a href="">Legal</a>
+    </footer>
+
+    <br />
+    <hr />
+    <br />
+    <!-- Listas / Lists -->
+
+    <h4>Listas / Lists</h4>
+
+    <ol start="500">
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+    </ol>
+
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+    </ul>
+
+    <ul>
+      <!-- El atributo value permite enlazar un valor real con un texto a leer por el usuario. -->
+      <li value="1">HTML</li>
+      <li value="2">CSS</li>
+      <li value="3">JS</li>
+    </ul>
+    <br />
+    <hr />
+    <br />
+    <!-- Tablas / Tables -->
+    <h4>Tablas / Tables</h4>
+    <table>
+      <caption>
+        Información de usuarios
+      </caption>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Edad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>john@gmail.com</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>Erik</td>
+          <td>erik@gmail.com</td>
+          <td>30</td>
+        </tr>
+         <td>Maria</td>
+          <td>maria@gmail.com</td>
+          <td>32</td>
+        </tr>
+      </tbody>
+        <tfoot>
+  
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Edad</th>
+          </tr>
+        </tfoot>
+      
+    </table>
+    <br />
+    <hr />
+    <br />
+
+    <!-- Formularios / Forms -->
+    <h4>Formularios / Forms</h4>
+    <!-- INICIO FORMULARIO -->
+    <form action="procesar-datos.php" method="POST">
+      
+    <div>
+      <label for="nameInput">Nombre</label><br>
+      <input id="nameInput" type="text" name="name" required placeholder="Introduce tu nombre"><br>
+    </div><br>
+    <div>
+      <label for="emailInput">Email</label><br>
+      <input id="emailInput" type="email" name="email" required placeholder="Introduce tu email">
+    </div><br>
+    <div>
+      <label for="passwordInput">Password</label><br>
+      <input id="passwordInput" type="password" name="password" required placeholder="Introduce tu password">
+    </div><br>
+    <div>
+      <label for="textInput">Descripción</label><br>
+      <textarea name="descripcion" id="textInput" cols="50" rows="10"></textarea>
+    </div><br>
+
+    <div>
+      <label for="genderInput">Género</label><br>
+      <select name="gender" id="genderInput">
+        <option value="female">Femenino</option>
+        <option value="male">Masculino</option>
+        <option value="other">Otro</option>
+      </select><br>
+
+    </div>
+      <input type="submit">
+      
+    </form>
+    <!-- CIERRE FORMULARIO -->
+  </body>
+</html>
