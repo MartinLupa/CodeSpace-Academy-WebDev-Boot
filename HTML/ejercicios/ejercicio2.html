@@ -7,31 +7,95 @@
     <title>Document</title>
   </head>
   <body>
-    <table>
-      <thead>
-        <tr>
-          <th>Subscription</th>
-          <th>Price</th>
-          <th>Support</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Free</td>
-          <td>Free</td>
-          <td>N/A</td>
-        </tr>
-        <tr>
-          <td>Personal</td>
-          <td>$9.99</td>
-          <td>Weekdays</td>
-        </tr>
-        <tr>
-          <td>Business</td>
-          <td>$49.99</td>
-          <td>24/7</td>
-        </tr>
-      </tbody>
-    </table>
+    <h3>Formulario de Registro</h3>
+    <form action="" type="POST">
+      <button>Enviar</button>
+      <br />
+      <br />
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" placeholder="Elon" />
+
+      <label for="name">Apellido:</label>
+      <input type="text" id="lastName" name="lastName" placeholder="Musk" />
+      <br />
+      <br />
+      <label for="age">Edad:</label>
+      <input type="number" id="age" name="age" min="1" max="99" />
+      <br />
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+      <br />
+      <br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" />
+      <br />
+      <br />
+
+      <!-- Para radios que deben ser mutuamente excluyentes: name tiene que ser igual
+      para todos -->
+      <div>
+        <input type="radio" id="female" name="genre" value="female" checked />
+        <label for="female">Mujer</label>
+        <br />
+        <input type="radio" id="male" name="genre" value="male" />
+        <label for="male">Hombre</label>
+        <br />
+        <input type="radio" id="other" name="genre" value="other" />
+        <label for="other">Otro</label>
+      </div>
+      <br />
+      <br />
+
+      <!-- P/ vincular un datalist con autocompletado y las distintas opciones: en input el atributo list="..." = el id del datalist. -->
+      <!-- label (for) = input(id) -- Para vincular label e input. -->
+      <!-- input(list) = datalist(id) -- Para vincular input y datalist -->
+      <label for="country">País</label>
+      <input type="text" id="country" list="countryList" />
+      <datalist id="countryList">
+        <option value="ar">Argentina</option>
+        <option value="sp">España</option>
+        <option value="dk">Dinamarca</option>
+        <option value="po">Portugal</option>
+        <option value="it">Italia</option>
+      </datalist>
+      <br />
+      <br />
+
+      <label for="language">Lenguaje de programción:</label>
+      <select name="language" id="language">
+        <option value="javascript">JavaScript</option>
+        <option value="java">JAVA</option>
+        <option value="python">Python</option>
+        <option value="cplus">C+</option>
+        <option value="PHP">PHP</option>
+      </select>
+      <br />
+      <br />
+
+      <input type="radio" id="codeSpace" name="academy" value="code" checked />
+      <label for="academy">Code Space Academy</label>
+      <br />
+      <input type="radio" id="academy2" name="academy" value="academy1" />
+      <label for="academy">Academia 2</label>
+      <br />
+      <input type="radio" id="academy3" name="academy" value="academy2" />
+      <label for="academy">Academia 3</label>
+      <br />
+      <br />
+
+      <input type="checkbox" id="emailing" />
+      <label for="emailing"
+        >Acepto recibir cientos de miles de correos irrelevantes.</label
+      >
+      <br />
+      <input type="checkbox" id="legal" />
+      <label for="legal">Acepto los términos y condiciones.</label>
+      <br />
+      <br />
+
+      <button>Enviar</button>
+      <button>Vaciar formulario</button>
+    </form>
   </body>
 </html>
