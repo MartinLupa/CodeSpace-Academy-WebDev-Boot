@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hello, world!</title>
-    <meta charset="UTF-8" />
+    
+    <meta charset="UTF-8" /> <!-- Conjunto de caracteres utf8-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="" />
+    <meta name="description" content="Cheat sheet sobre HTML" /> <!-- Descripción de la página. Muy utilizado en SEO -->
+    <meta name="author" content="Martín Lupa">
+    <meta name="keywords" content="heading table form div">
+    
+    <!-- Controlar la indexación de mi página-->
+    <meta name="robots" content="index"> 
+    <meta name="robots" content="index">
+    
+    <!-- Controlar si los motores siguen y procesan los enlaces de mi página-->
+    <meta name="robots" content="follow"> 
+    <meta name="robots" content="nofollow">
+    
+    <!-- Controlar la caché de mi página-->
+    <meta http-equiv="cache-control" content="no-cache">
 
+    <!-- Redireccionar la página, ejemplo cambio de URL pero pienso que mucha gente seguirá llegando a la anterior. En vez de bajarla, hago la redirección-->
+    <!-- <meta http-equiv="refresh" content="0; url=http://google.com"> -->
+
+    <!-- CSS -->
+    <!-- Incorpora CSS directamente desde el HTML (No recomendado)-->
     <style>
       .resaltado {
         color: red;
       }
     </style>
+    <!-- CSS importado desde otro archivo (Recomendado).-->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Cheatsheet</title>
   </head>
   <body>
+
     <!-- Enlaces internos y externos -->
     <a href="https://codespaceacademy.com">Ir a Code Space</a>
     <a href="blog.html" target="_blank">Ir a Blog</a>
@@ -30,7 +54,6 @@
     <h4>Título cuatro</h4>
     <h5>Título cinco</h5>
     <h6>Título seis</h6>
-
     <br />
     <hr />
     <br />
@@ -75,7 +98,6 @@ Texto preformateado es
     </p>
 
     <!-- Contenedores / Containers -->
-
     <header>
       <nav>
         <a href="">Enlace 1</a>
