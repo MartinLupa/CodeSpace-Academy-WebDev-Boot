@@ -1,0 +1,47 @@
+/* ----------------------- SELECTORES ----------------------- */
+
+/* Selector universal: * */
+/* Selectores de etiqueta */
+p {
+  color: rgb(67, 67, 70);
+}
+
+h1 {
+  background-color: rgb(16, 46, 90);
+  color: white;
+  text-align: center;
+}
+
+/* Selector de clase: .className */
+.border {
+  /* border: 5px;
+  border-style: solid;
+  border-color: tomato; */
+  border: 5px solid tomato;
+}
+
+/* Selector de id: #idName */
+#mainContainer {
+  height: 200px;
+  background-color: rgb(85, 138, 173);
+}
+/* Selector por atributo: [attr: value] */
+[href="#example"] {
+  text-decoration: none;
+}
+
+/* Selector por jerarquía */
+/* Cualquier span dentro de un div a cualquier profundidad */
+div span {
+}
+
+/* los li que sean hijos directos del ul */
+ul > li {
+}
+
+/* Los elementos con clase link que esten dentro de elementos con clase container */
+.container > .link {
+}
+
+#main nav .btn {
+}
