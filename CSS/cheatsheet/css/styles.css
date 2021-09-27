@@ -43,5 +43,63 @@ ul > li {
 .container > .link {
 }
 
-#main nav .btn {
+/* Box model */
+body {
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+.boxModel {
+  height: 100vh;
+  background-color: cornflowerblue;
+  border: 2px solid darkblue;
+  margin: 20px;
+  padding: 20px 10px 20px;
+}
+
+.innerBox {
+  height: 100px;
+  background-color: darkred;
+  margin-top: 20px;
+}
+
+/* Box Sizing */
+.box-sizing-parent {
+  width: 200px;
+  height: 200px;
+  border: 10px solid goldenrod;
+}
+
+.box-sizing-child {
+  height: 50px;
+  background-color: gray;
+  border: 10px solid darkslategray;
+  width: 100%;
+}
+
+.border-box {
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.background-image {
+  height: 100vh;
+  background-image: url(images/pexels-sourav-mishra-5541995.jpg);
+  opacity: 0.5;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom center;
+}
+
+h3 {
+  color: black;
+  text-align: center;
+  padding-top: 250px;
+}
+
+.spacer {
+  height: 200vh;
 }
