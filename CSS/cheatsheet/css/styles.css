@@ -3,7 +3,7 @@
 /* Selector universal: * */
 /* Selectores de etiqueta */
 p {
-  color: rgb(67, 67, 70);
+  color: rgb(101, 101, 104);
 }
 
 h1 {
@@ -100,6 +100,140 @@ h3 {
   padding-top: 250px;
 }
 
-.spacer {
-  height: 200vh;
+/* Cómo centrar a lo ancho del eje X */
+.centered-x {
+  height: 50px;
+  background-color: seagreen;
+  width: 25%;
+  margin: auto;
+}
+
+/* Tipos de Display: none, inline, block, inline-block */
+/* ^= en lugar de =, selecciona aquello que EMPIECE con lo indicado entre comillas */
+/* [class^="box-"] {
+  background-color: darkslategray;
+} */
+.box-0,
+.box-1,
+.box-2,
+.box-3,
+.box-4,
+.box-5,
+.box-6 {
+  background-color: darkslategray;
+  border: 2px solid olivedrab;
+}
+
+/* Display None */
+.box-0 {
+  display: none;
+}
+
+/* Display Inline */
+.box-3,
+.box-3 p,
+.box-4,
+.box-4 p {
+  display: inline;
+}
+
+/* Inline-block */
+.box-5,
+.box-5 p,
+.box-6,
+.box-6 p {
+  display: inline-block;
+}
+
+/* Posicionamiento absoluto: centrado en ambos ejes */
+.pos-absolute-parent {
+  height: 300px;
+  border: 15px solid grey;
+
+  position: relative;
+}
+
+.pos-absolute-child {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(138, 141, 189);
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  margin-bottom: -25px;
+  margin-left: -25px;
+}
+
+/* Posicionamiento relativo */
+.pos-relative-parent {
+  height: 300px;
+  border: 15px solid grey;
+}
+
+.pos-relative-child {
+  background-color: rgb(103, 151, 91);
+  width: 50px;
+  height: 50px;
+  position: relative;
+  bottom: 50px;
+  left: 20px;
+}
+
+/* Posicionamiento sticky */
+.pos-sticky-parent {
+  background-color: skyblue;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+/* Posicionamiento fixed */
+.pos-fixed {
+  background-color: springgreen;
+  padding: 10px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 10px;
+  z-index: 1;
+}
+.pos-fixed:hover {
+  background-color: tomato;
+  transition: 0.5s;
+}
+
+.pos-fixed a {
+  text-decoration: none;
+  color: white;
+}
+
+.overflow-parent {
+  width: 200px;
+  height: 100px;
+  border: 3px dashed black;
+  margin-bottom: 50px;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.visible {
+  overflow: visible;
+}
+
+.scroll {
+  overflow: scroll;
+}
+
+/* Media queries */
+.visible-for-desktops {
+  background-color: darkslategray;
+  padding: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .visible-for-desktops {
+    display: none;
+  }
 }
