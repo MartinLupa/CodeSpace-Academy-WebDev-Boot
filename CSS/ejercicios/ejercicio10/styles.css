@@ -1,0 +1,79 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+p,
+h5 {
+  color: rgb(124, 121, 121);
+}
+h1 {
+  margin: 0;
+  font-size: 1.5em;
+  color: rgb(233, 230, 230);
+}
+
+h4 {
+  color: rgb(92, 91, 91);
+}
+
+.header-container {
+  background-color: rgb(204, 98, 181);
+  padding: 5px 50px;
+}
+
+.navbar {
+  background-color: rgb(48, 48, 51);
+  padding: 5px 50px;
+}
+
+.navbar a {
+  color: rgb(189, 186, 186);
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: rgb(204, 98, 181);
+  transition: 0.3s;
+}
+
+.main-container {
+  padding: 50px;
+  font-size: 2em;
+  color: rgb(235, 231, 231);
+  background-image: url(pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg);
+  background-size: cover;
+}
+
+.welcome-container {
+  background-color: rgb(241, 235, 235);
+  padding: 15px 50px;
+  display: block;
+  font-size: 0.9em;
+}
+
+.welcome-column {
+  width: 60%;
+  padding: 5px;
+  text-align: justify;
+}
+
+aside {
+  background-color: rgb(48, 48, 51);
+  padding: 5px;
+}
+
+aside p {
+  color: rgb(189, 186, 186);
+}
+
+footer {
+  background-color: rgb(48, 48, 51);
+  padding: 10px;
+  text-align: center;
+}
