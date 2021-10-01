@@ -1,0 +1,34 @@
+/* ------- GENERAL ------- */
+* {
+  box-sizing: content-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 50px;
+}
+
+ul {
+  padding: 0;
+  background-color: darkgrey;
+  list-style: none;
+  text-align: center;
+  width: 40%;
+  margin: auto;
+}
+
+li {
+  color: darkslategray;
+  border: 1px solid rgb(231, 227, 227);
+}
+
+li:hover {
+  background-color: gray;
+  color: ghostwhite;
+  border: 1px solid rgb(58, 49, 49);
+  transition: 0.3s;
+}
+
+i {
+  margin: 5px;
+}
