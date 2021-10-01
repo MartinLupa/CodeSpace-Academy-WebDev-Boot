@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(78, 78, 78);
+}
+
+a:hover {
+  color: rgb(229, 233, 233);
+  transition: 0.3s;
+}
+
+.flex-parent {
+  background-color: darkgrey;
+  padding: 10px 20px;
+  margin: auto;
+  border-radius: 3px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+i {
+  margin-left: 10px;
+  margin-right: 10px;
+}

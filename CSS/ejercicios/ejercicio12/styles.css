@@ -1,0 +1,70 @@
+/* ------- GENERAL ------- */
+* {
+  box-sizing: content-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: blueviolet;
+  color: darkgrey;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1em;
+  padding: 40px;
+}
+
+.general-container {
+  display: flex;
+  flex-direction: column;
+  /* El atributo space-between envia el contenedor inferior al final. */
+  justify-content: space-between;
+  /* margin auto en laterales p/ centrar planilla. */
+  margin: 20px auto;
+  height: 800px;
+}
+
+/* ------- TOP ------- */
+div {
+  background-color: white;
+  margin: 0 50px;
+  border-radius: 5px;
+}
+
+.child {
+  height: 40px;
+  background-color: rgb(202, 198, 198);
+  margin: 20px 20px;
+  border-radius: 3px;
+}
+
+/* ------- BOTTOM ------- */
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgb(202, 198, 198);
+}
+
+.content {
+  height: 40px;
+  width: 120px;
+  background-color: rgb(202, 198, 198);
+  margin: 10px 10px;
+  border-radius: 3px;
+}
+
+@media only screen and (min-width: 600px) {
+  .general-container {
+    /* Limite en ancho a partir de viewports superiores a 600px. */
+    width: 550px;
+  }
+}
