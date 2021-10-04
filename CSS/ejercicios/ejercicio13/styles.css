@@ -1,0 +1,86 @@
+/* General CSS */
+body {
+  padding: 20px 40px;
+}
+
+[class^="grid-child"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* CSS Grid con línea */
+
+.parent-linea {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.parent-linea .grid-child-1 {
+  background-color: lightseagreen;
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.parent-linea .grid-child-2 {
+  background-color: rgb(109, 65, 180);
+  grid-column: 1;
+  grid-row: 2 / 5;
+}
+.parent-linea .grid-child-3 {
+  color: white;
+  background-color: rgb(6, 26, 43);
+  grid-column: 2;
+  grid-row: 2 / 4;
+}
+.parent-linea .grid-child-4 {
+  background-color: lightskyblue;
+  grid-column: 2;
+  grid-row: 4;
+}
+.parent-linea .grid-child-5 {
+  background-color: tan;
+  grid-column: 1 / 3;
+  grid-row: 5;
+}
+
+/* CSS Grid con área */
+
+.parent-area {
+  gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "nav    nav"
+    "cont1  cont2"
+    "cont1  cont2"
+    "cont1  cont3"
+    "footer footer";
+}
+
+.parent-area .grid-child-1 {
+  background-color: lightseagreen;
+  grid-area: nav;
+}
+
+.parent-area .grid-child-2 {
+  background-color: rgb(109, 65, 180);
+  grid-area: cont1;
+}
+.parent-area .grid-child-3 {
+  color: white;
+  background-color: rgb(6, 26, 43);
+  grid-area: cont2;
+}
+.parent-area .grid-child-4 {
+  background-color: lightskyblue;
+  grid-area: cont3;
+}
+.parent-area .grid-child-5 {
+  background-color: tan;
+  grid-area: footer;
+}

@@ -1,5 +1,3 @@
-/* ----------------------- SELECTORES ----------------------- */
-
 /* Selector universal: * */
 /* Selectores de etiqueta */
 p {
@@ -236,4 +234,113 @@ h3 {
   .visible-for-desktops {
     display: none;
   }
+}
+
+/* -------------- CSS Grid -------------- */
+
+[class^="grid-child"] {
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.grid-parent {
+  background-color: lightgray;
+  padding: 10px;
+  box-sizing: border-box;
+  display: grid;
+  gap: 10px;
+
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+
+  /* grid-template-columns: 1fr 2fr; */
+  grid-template-rows: 2fr;
+}
+
+/* @media only screen and (max-width: 900px) {
+  .grid-parent {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+}
+*/
+@media only screen and (max-width: 480px) {
+  .grid-parent {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* -------------- CSS Grid con líneas -------------- */
+.grid-parent-linea {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.grid-parent-linea .grid-child-1 {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.grid-parent-linea .grid-child-2 {
+  grid-column: 3;
+  grid-row: 1/3;
+}
+
+.grid-parent-linea .grid-child-3 {
+  z-index: -1;
+  opacity: 0.7;
+  grid-column: 1/3;
+  grid-row: 2/5;
+}
+
+.grid-parent-linea .grid-child-4 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.grid-parent-linea .grid-child-5 {
+  grid-column: 2/4;
+  grid-row: 4;
+}
+
+.grid-parent-linea .grid-child-6 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* -------------- CSS Grid por área -------------- */
+.grid-parent-area {
+  display: grid;
+  padding: 10px;
+  gap: 10px;
+  grid-template-columns: 150px 1fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+
+  grid-template-areas:
+    "nav    nav    nav"
+    "cont1  cont2  cont3"
+    "footer footer footer";
+}
+
+.grid-parent-area .grid-child-1 {
+  grid-area: nav;
+}
+.grid-parent-area .grid-child-2 {
+  grid-area: cont1;
+}
+.grid-parent-area .grid-child-3 {
+  grid-area: cont2;
+}
+.grid-parent-area .grid-child-4 {
+  grid-area: cont3;
+}
+.grid-parent-area .grid-child-5 {
+  grid-area: footer;
 }
