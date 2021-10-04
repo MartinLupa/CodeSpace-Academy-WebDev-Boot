@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* ---------------- HEADER ---------------- */
+.header-parent {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+.nav-child-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-child-links > a {
+  padding: 5px;
+}
+
+/* ---------------- MAIN ---------------- */
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.article {
+  width: 85%;
+  text-align: justify;
+}
+
+.article-elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+aside {
+  width: 15%;
+}
+
+aside li {
+  list-style-type: none;
+  margin: 5px;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  color: honeydew;
+  background-color: rgb(48, 47, 47);
+  padding: 10px 20px;
+  text-align: right;
+}
+
+/* ---------------- RESPONSIVENESS ---------------- */
+@media only screen and (max-width: 760px) {
+  main {
+    flex-direction: column;
+  }
+  .article {
+    width: 100%;
+  }
+  aside {
+    width: 100%;
+    padding-top: 20px;
+    margin: auto;
+  }
+
+  [class^='link-block'] {
+    display: flex;
+    padding: 0;
+  }
+}
