@@ -1,0 +1,116 @@
+/* ---------- Grid setup ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+[class^='square-'] {
+  background-color: #5c7aea;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
+  justify-content: center;
+}
+
+/* ---------- Animation ---------- */
+
+[class^='square-']:hover {
+  background-color: #8197e6;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+@keyframes appear {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+.square-1 {
+  animation-name: appear;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+}
+.square-2 {
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+.square-3 {
+  animation-name: appear;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+}
+.square-4 {
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-delay: 2s;
+}
+.square-5 {
+  animation-name: appear;
+  animation-duration: 2.5s;
+  animation-delay: 2.5s;
+}
+.square-6 {
+  animation-name: appear;
+  animation-duration: 3s;
+  animation-delay: 3s;
+}
+.square-7 {
+  animation-name: appear;
+  animation-duration: 3.5s;
+  animation-delay: 3.5s;
+}
+.square-8 {
+  animation-name: appear;
+  animation-duration: 4s;
+  animation-delay: 4s;
+}
+.square-9 {
+  animation-name: appear;
+  animation-duration: 4.5s;
+  animation-delay: 4.5s;
+}
+
+.square-10 {
+  animation-name: appear;
+  animation-duration: 5s;
+  animation-delay: 5s;
+}
+.square-11 {
+  animation-name: appear;
+  animation-duration: 5.5s;
+  animation-delay: 5.5s;
+}
+.square-12 {
+  animation-name: appear;
+  animation-duration: 6s;
+  animation-delay: 6s;
+}
+.square-13 {
+  animation-name: appear;
+  animation-duration: 6.5s;
+  animation-delay: 6.5s;
+}
+.square-14 {
+  animation-name: appear;
+  animation-duration: 7s;
+  animation-delay: 7s;
+}
+.square-15 {
+  animation-name: appear;
+  animation-duration: 7.5s;
+  animation-delay: 7.5s;
+}
+.square-16 {
+  animation-name: appear;
+  animation-duration: 8s;
+  animation-delay: 8s;
+}
