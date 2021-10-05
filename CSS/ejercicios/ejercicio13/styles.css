@@ -55,32 +55,32 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas:
-    "nav    nav"
-    "cont1  cont2"
-    "cont1  cont2"
-    "cont1  cont3"
-    "footer footer";
+    "pageTitle     pageTitle"
+    "mainContent   mastHead"
+    "mainContent   mastHead"
+    "mainContent   sidebar"
+    "footerContent footerContent";
 }
 
 .parent-area .grid-child-1 {
   background-color: lightseagreen;
-  grid-area: nav;
+  grid-area: pageTitle;
 }
 
 .parent-area .grid-child-2 {
   background-color: rgb(109, 65, 180);
-  grid-area: cont1;
+  grid-area: mainContent;
 }
 .parent-area .grid-child-3 {
   color: white;
   background-color: rgb(6, 26, 43);
-  grid-area: cont2;
+  grid-area: mastHead;
 }
 .parent-area .grid-child-4 {
   background-color: lightskyblue;
-  grid-area: cont3;
+  grid-area: sidebar;
 }
 .parent-area .grid-child-5 {
   background-color: tan;
-  grid-area: footer;
+  grid-area: footerContent;
 }

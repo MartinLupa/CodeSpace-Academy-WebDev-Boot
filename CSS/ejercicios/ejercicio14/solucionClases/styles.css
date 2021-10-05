@@ -1,0 +1,53 @@
+/* Ejemplo: si en esta solución asignamos background-color a la main-section, 
+el color iría hasta el footer porque usa flex-grow. En mi solución con space-between
+el background-color va solo hasta el final del párrafo. */
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: whitesmoke;
+  padding: 0 2em;
+}
+
+.main-section {
+  padding: 2em;
+  display: flex;
+
+  /* Para adaptar espacio del contenedor central a 100vh. */
+  flex-grow: 1;
+}
+
+.content {
+  text-align: justify;
+  width: 80%;
+}
+
+.title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  width: 20%;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 0.8em;
+
+  text-align: right;
+}

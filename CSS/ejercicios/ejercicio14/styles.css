@@ -3,7 +3,13 @@
   margin: 0;
 }
 
+/* body es parent container de wrapper y footer 
+al asignar space-between + min-height 100vh envía footer al final del vp, 
+aun cuando el contenido no es suficiente para llenar el vp completo.*/
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
 }
 
@@ -18,7 +24,6 @@ body {
 
 .nav-child-links {
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
@@ -29,25 +34,18 @@ body {
 /* ---------------- MAIN ---------------- */
 main {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   padding: 20px;
 }
 
 .article {
-  width: 85%;
+  width: 80%;
   text-align: justify;
 }
 
 .article-elements {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   margin-bottom: 20px;
-}
-
-aside {
-  width: 15%;
 }
 
 aside li {
@@ -63,8 +61,8 @@ footer {
   text-align: right;
 }
 
-/* ---------------- RESPONSIVENESS ---------------- */
-@media only screen and (max-width: 760px) {
+/* ---------------- MEDIA QUERIES ---------------- */
+@media only screen and (max-width: 650px) {
   main {
     flex-direction: column;
   }
@@ -77,7 +75,7 @@ footer {
     margin: auto;
   }
 
-  [class^='link-block'] {
+  [class^="link-block"] {
     display: flex;
     padding: 0;
   }

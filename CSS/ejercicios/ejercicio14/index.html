@@ -8,21 +8,20 @@
     <title>Ejercicio 14</title>
   </head>
   <body>
-    <!-- ---------------- HEADER ---------------- -->
-    <header class="header-parent">
-      <div class="nav-child-logo">
-        <h1>Logo</h1>
-      </div>
-      <nav class="nav-child-links">
-        <a href="">Inicio</a>
-        <a href="">Servicios</a>
-        <a href="">Contacto</a>
-        <button>Login</button>
-      </nav>
-    </header>
-    <!-- ---------------- MAIN ---------------- -->
+    <!-- Wraper divide el contenido en 2 (footer y resto cont). "space-between" envia ambos componentes a los límites sup/inf del vp -->
+    <div class="wrapper">
+      <!-- ---------------- HEADER ---------------- -->
+      <header class="header-parent">
+        <h1 class="nav-child-logo">Logo</h1>
+        <nav class="nav-child-links">
+          <a href="">Inicio</a>
+          <a href="">Servicios</a>
+          <a href="">Contacto</a>
+          <button>Login</button>
+        </nav>
+      </header>
 
-    <div class="wraper">
+      <!-- ---------------- MAIN ---------------- -->
       <main>
         <div class="article">
           <div class="article-elements">
@@ -72,9 +71,9 @@
           </ul>
         </aside>
       </main>
-
-      <!-- ---------------- FOOTER ---------------- -->
-      <footer><p>Copyright 2021</p></footer>
     </div>
+
+    <!-- ---------------- FOOTER ---------------- -->
+    <footer><p>Copyright 2021</p></footer>
   </body>
 </html>
