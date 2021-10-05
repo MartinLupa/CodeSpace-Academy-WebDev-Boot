@@ -344,3 +344,105 @@ h3 {
 .grid-parent-area .grid-child-5 {
   grid-area: footer;
 }
+
+/* -------------- Degradados/Gradientes -------------- */
+
+[class^="gradient-"] {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.gradient-1 {
+  background: linear-gradient(to right, blueviolet, white);
+}
+
+.gradient-2 {
+  background: linear-gradient(to bottom, blue, white 20%, orange);
+}
+
+.gradient-3 {
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1)
+    ),
+    url(images/pexels-sourav-mishra-5541995.jpg);
+}
+
+.gradient-4 {
+  width: 100px;
+  margin: auto;
+  background: radial-gradient(
+    white 15%,
+    rgb(230, 230, 230) 25%,
+    rgb(202, 202, 202) 50%
+  );
+
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.333);
+}
+
+/* -------------- Transformaciones -------------- */
+
+.transformation-1 {
+  height: 100px;
+  width: 100px;
+  background-color: violet;
+  z-index: 1;
+
+  transform: translate(100px, -250px);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.transformation-2 {
+  height: 100px;
+  width: 100px;
+  background-color: turquoise;
+
+  transform: translate(150px, -200px);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.transformation-3 {
+  height: 100px;
+  width: 100px;
+  background-color: turquoise;
+
+  transform: translate(50px, -300px);
+
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.transformation-4 {
+  background-color: tomato;
+  width: 200px;
+  height: 200px;
+  transform: translate(50px);
+}
+
+.text-animation {
+  animation-name: slidein;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+  from {
+    position: relative;
+    right: 450px;
+  }
+
+  50% {
+    right: 0;
+  }
+
+  to {
+    position: relative;
+    right: 450px;
+  }
+}
