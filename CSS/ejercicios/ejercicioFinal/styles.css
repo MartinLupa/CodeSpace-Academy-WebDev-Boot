@@ -29,6 +29,7 @@ body {
 }
 
 h2 {
+  padding-top: 20px;
   font-size: 1.5em;
 }
 
@@ -66,6 +67,7 @@ hr {
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
+  min-height: 470px; /*Si quito esta condicion, tengo problemas con la altura del main-container*/
 }
 
 .email-container,
