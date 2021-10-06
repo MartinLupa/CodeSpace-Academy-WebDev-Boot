@@ -26,7 +26,6 @@
 body {
   color: var(--gray-dark);
   background-color: var(--gray-light);
-  height: 100vh;
 }
 
 h2 {
@@ -36,7 +35,7 @@ h2 {
 input {
   height: 30px;
   border-radius: 5px;
-  border: 1px solid lightgrey;
+  border: 1px solid lightgray;
   padding: 5px 10px;
 }
 
@@ -51,6 +50,7 @@ hr {
   border-radius: 5px;
   box-shadow: 3px 3px 10px lightgray;
   margin: 30px 20px;
+  max-width: 1024px;
 }
 
 .image-container {
@@ -193,6 +193,7 @@ td {
 a {
   color: var(--purple-dark);
   font-weight: 600;
+  font-size: 0.8em;
   text-decoration: none;
   margin-top: 10px;
 }
@@ -287,9 +288,30 @@ i {
 
 /* ----------------------- Media Queries ----------------------- */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 480px) {
+  .main-container {
+    margin: 30px 50px;
+  }
+  .input-container {
+    padding: 20px 50px;
+  }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
+  .main-container {
+    display: flex;
+  }
+  .image-container {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+  }
+  .input-container {
+    width: 50%;
+    padding: 0px 50px;
+  }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1024px) {
+  .main-container {
+    margin: 30px auto;
+  }
 }
