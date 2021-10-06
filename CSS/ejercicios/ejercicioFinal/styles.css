@@ -77,10 +77,30 @@ hr {
 
 /* ----------------------- Index ----------------------- */
 
+.left-col {
+  background-color: var(--white);
+  font-size: 0.8em;
+  padding: 10px;
+  display: none;
+}
+
+[class^='options'] {
+  display: flex;
+  align-items: center;
+  color: gray;
+}
+
+.left-col i {
+  padding: 10px;
+  margin: 0;
+}
+
 .profile-img {
   border-radius: 50%;
-  height: 20px;
+  height: 22px;
   background-color: var(--teal-light);
+  margin-bottom: -4px;
+  margin-left: 10px;
 }
 
 .navbar {
@@ -211,6 +231,10 @@ i {
   color: var(--gray-light);
 }
 
+.login-btn > a {
+  color: var(--gray-light);
+}
+
 .login-btn:hover {
   background-color: var(--purple-dark);
   transition: 0.3s;
@@ -225,6 +249,13 @@ i {
   background-color: var(--white);
   box-shadow: 1px 1px 4px lightgrey;
   color: var(--gray-dark);
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.git-btn > a {
+  color: var(--gray-dark);
+  font-size: 1em;
 }
 
 .git-btn:hover,
@@ -235,6 +266,7 @@ i {
 }
 
 /* ----------------------- Icons ----------------------- */
+
 .fas {
   border-radius: 50%;
   padding: 8px;
@@ -289,14 +321,18 @@ i {
 /* ----------------------- Media Queries ----------------------- */
 
 @media only screen and (min-width: 480px) {
+  /*Login*/
   .main-container {
     margin: 30px 50px;
   }
   .input-container {
     padding: 20px 50px;
   }
+
+  /*Index*/
 }
 @media only screen and (min-width: 768px) {
+  /*Login*/
   .main-container {
     display: flex;
   }
@@ -309,9 +345,52 @@ i {
     width: 50%;
     padding: 0px 50px;
   }
+
+  /*Index*/
+  .wrapper {
+    display: flex;
+  }
+  .left-col {
+    display: block;
+    width: 20%;
+  }
+  .right-col {
+    width: 80%;
+  }
+
+  .info-container-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    grid-template-areas:
+      'cont1 cont2'
+      'cont3 cont4';
+  }
+
+  .cont1 {
+    grid-area: cont1;
+  }
+  .cont-2 {
+    grid-area: cont2;
+  }
+  .cont3 {
+    grid-area: cont3;
+  }
+  .cont4 {
+    grid-area: cont4;
+  }
 }
 @media only screen and (min-width: 1024px) {
+  /*Login*/
   .main-container {
     margin: 30px auto;
+  }
+
+  /*Index*/
+  .info-container-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 'cont1 cont2 cont3 cont4';
   }
 }
