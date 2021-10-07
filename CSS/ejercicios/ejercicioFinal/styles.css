@@ -26,6 +26,7 @@
 body {
   color: var(--gray-dark);
   background-color: var(--gray-light);
+  min-height: 500px;
 }
 
 h2 {
@@ -64,10 +65,11 @@ hr {
 }
 
 .input-container {
+  height: 80%;
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
-  min-height: 470px; /*Si quito esta condicion, tengo problemas con la altura del main-container*/
+  /*Si quito esta condicion, tengo problemas con la altura del main-container*/
 }
 
 .email-container,
