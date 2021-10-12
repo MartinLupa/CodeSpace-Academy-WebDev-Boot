@@ -34,6 +34,10 @@ h2 {
   font-size: 1.5em;
 }
 
+h3 {
+  padding-bottom: 15px;
+}
+
 input {
   height: 30px;
   border-radius: 5px;
@@ -44,6 +48,15 @@ input {
 hr {
   margin: 15px 0;
   opacity: 0.5;
+}
+
+.hidden {
+  display: none;
+}
+
+.selected {
+  color: black !important;
+  border-left: 4px inset var(--purple-light);
 }
 
 /* ----------------------- Login ----------------------- */
@@ -83,7 +96,6 @@ hr {
   background-color: var(--white);
   font-size: 0.8em;
   padding: 10px;
-  display: none;
 }
 
 [class^='options'] {
@@ -103,6 +115,7 @@ hr {
   background-color: var(--teal-light);
   margin-bottom: -4px;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 .navbar {
@@ -181,6 +194,14 @@ td {
   margin: auto;
 }
 
+.flex-row {
+  display: flex;
+}
+
+.flex-row h5 p {
+  display: block;
+}
+
 .first-col {
   text-align: left;
 }
@@ -204,7 +225,7 @@ td {
   padding-top: 5px;
 }
 
-.selected {
+.selected-btn {
   background-color: var(--purple-dark);
   color: var(--gray-light);
   padding: 5px 10px;
@@ -335,6 +356,11 @@ i {
 }
 @media only screen and (min-width: 768px) {
   /*Login*/
+
+  .hidden {
+    display: block;
+  }
+
   .main-container {
     display: flex;
   }
@@ -353,7 +379,6 @@ i {
     display: flex;
   }
   .left-col {
-    display: block;
     width: 20%;
   }
   .right-col {
