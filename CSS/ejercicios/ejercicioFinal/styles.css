@@ -306,6 +306,9 @@ i {
 
 /* ----------------------- Icons ----------------------- */
 
+.far {
+  margin-left: 15px;
+}
 .fas {
   border-radius: 50%;
   padding: 8px;
