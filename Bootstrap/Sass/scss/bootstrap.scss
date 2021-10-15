@@ -1,3 +1,8 @@
+// Proceso:
+// Descargo source files de Bootstrap.
+// Genero carpeta CSS y SCSS. En SCSS voy a generar este archivo bootstrap.scss,
+// sobre el que voy a generar las modificaciones.
+
 // Importar los archivos base de bootstrap
 @import "../bootstrap-4.6.0/scss/functions";
 @import "../bootstrap-4.6.0/scss/variables";
@@ -5,7 +10,7 @@
 // Personalización de variables
 
 $theme-colors: (
-  "success": green,
+  "success": pink,
 );
 
 // Importaremos el resto de bootstrap para que se procese
