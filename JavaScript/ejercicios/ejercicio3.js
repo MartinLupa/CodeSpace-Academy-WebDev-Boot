@@ -1,7 +1,7 @@
 /*
 a) Algoritmo que lea dos números y nos diga cuál de ellos es mayor o si son iguales (recuerda usar
    la estructura condicional SI).
-b) Ahora con 3 números diferentes
+b) Ahora con 3 números DIFERENTES.
 */
 var prompt = require("prompt-sync")();
 
@@ -25,17 +25,23 @@ const num3 = parseInt(prompt("3° número: "));
 
 let mayorNum = 0;
 
-if (num1 === num2 && num2 === num3) {
-  console.log("Son números iguales.");
-} else if (num1 > num2 && num1 > num3) {
-  mayorNum = num1;
-  console.log("El número 1 es el mayor.");
-} else if (num2 > num3) {
-  mayorNum = num2;
-  console.log("El número 2 es el mayor.");
+if (num1 === num2 || num1 === num3 || num2 === num3) {
+  console.log("Los números deben ser todos diferentes. Intentalo nuevamente.");
+} else if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+  console.log("Por favor introduzca números, no letras. Intentalo nuevamente");
 } else {
-  mayorNum = num3;
-  console.log("El número 3 es el mayor.");
+  if (num1 === num2 && num2 === num3) {
+    console.log("Son números iguales.");
+  } else if (num1 > num2 && num1 > num3) {
+    mayorNum = num1;
+    console.log("El 1º es el mayor.");
+  } else if (num2 > num3) {
+    mayorNum = num2;
+    console.log("El 2º es el mayor.");
+  } else {
+    mayorNum = num3;
+    console.log("El 3º es el mayor.");
+  }
 }
 
 //Opción C: uso de FOR LOOP

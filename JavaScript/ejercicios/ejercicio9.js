@@ -14,4 +14,4 @@ const nota5 = parseInt(prompt("Nota Nº5: "));
 
 let notasArr = [];
 notasArr.push(nota1, nota2, nota3, nota4, nota5);
-console.log(notasArr);
+for()

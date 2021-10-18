@@ -9,7 +9,7 @@ Categoría Incremento
    3         6%
    4         3%
 */
-var prompt = require('prompt-sync')();
+var prompt = require("prompt-sync")();
 
 let catTabla = [
   { cat: 1, aum: 0.15 },
@@ -20,8 +20,8 @@ let catTabla = [
 // ---------------------------------------------------------------------------
 // ------------------- OPCION 1: solución con IF STATEMENT -------------------
 
-// --------------------------------------------------------------------------------------------
-// ------------------- OPCION 2: solución con FOR LOOP en base a un objeto. -------------------
+// ------------------------------------------------------------------------------------------------------
+// ------------------- OPCION 2: solución con FOR LOOP en base a un array de objetos. -------------------
 /*
 const categoria = prompt('Ingrese su categoría: ');
 const sueldo = parseInt(prompt('Ingrese su sueldo: '));
@@ -40,13 +40,13 @@ for (let i = 0; i < catTabla.length; i++) {
 
 let categoria = 0;
 function preguntaCat() {
-  categoria = parseInt(prompt('Ingrese su categoría: '));
+  categoria = parseInt(prompt("Ingrese su categoría: "));
   return categoria;
 }
 
 let sueldo = 0;
 function preguntaSueldo() {
-  sueldo = parseInt(prompt('Ingrese su sueldo: '));
+  sueldo = parseInt(prompt("Ingrese su sueldo: "));
   return sueldo;
 }
 
@@ -54,7 +54,7 @@ function informaAumento() {
   let nuevoSueldo = 0;
   preguntaCat();
   if (categoria < 1 || categoria > 4) {
-    console.log('Por favor ingrese una categoria válida');
+    console.log("Por favor ingrese una categoria válida");
     informaAumento(); //Uso de recursión.
   } else {
     preguntaSueldo();

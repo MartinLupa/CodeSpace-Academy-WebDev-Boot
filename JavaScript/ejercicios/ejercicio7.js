@@ -3,14 +3,14 @@ Construir un algoritmo que dado el coste de un artículo vendido y la cantidad d
 calcule e imprima el cambio que se debe entregar al cliente.
 */
 
-var prompt = require('prompt-sync')();
+var prompt = require("prompt-sync")();
 
 // Definición de stock de productos:
 const productos = [
-  { prod: 'manzana', precio: 2 },
-  { prod: 'banana', precio: 1.5 },
-  { prod: 'pera', precio: 1 },
-  { prod: 'mango', precio: 3 },
+  { prod: "manzana", precio: 2 },
+  { prod: "banana", precio: 1.5 },
+  { prod: "pera", precio: 1 },
+  { prod: "mango", precio: 3 },
 ];
 
 //Informa al cliente de los productos y precios:
@@ -24,18 +24,18 @@ function imprimeProd() {
   }
 }
 
-let pedidoProd = '';
+let pedidoProd = "";
 //Pregunta al cliente producto a comprar y cantidad:
 function tomaPedidoProd() {
   pedidoProd = prompt(
-    'Qué producto quisiera comprar(manzana, banana, pera o mango)?: '
+    "Qué producto quisiera comprar(manzana, banana, pera o mango)?: "
   );
   return pedidoProd;
 }
 
 let pedidoCant = 0;
 function tomaPedidoCant() {
-  pedidoCant = prompt('Cuántos Kgs.? ');
+  pedidoCant = prompt("Cuántos Kgs.? ");
   return pedidoCant;
 }
 
@@ -55,10 +55,10 @@ function costoTotal() {
 
 let valorRecibido = 0;
 function pago() {
-  valorRecibido = parseInt(prompt('Con cuánto desea abonar? '));
+  valorRecibido = parseInt(prompt("Con cuánto desea abonar? "));
 
   if (valorRecibido === costo) {
-    console.log('Pago justo. Gracias por su compra!');
+    console.log("Pago justo. Gracias por su compra!");
   } else if (valorRecibido < costo) {
     console.log(`El total es: $ ${costo}, faltan $ ${costo - valorRecibido}`);
     pago();
