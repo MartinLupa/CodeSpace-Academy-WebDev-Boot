@@ -1,7 +1,7 @@
 //Algoritmo que lea dos números, calcule y escriba el valor de su suma, resta, producto y división.
 var prompt = require("prompt-sync")();
 
-//Opcion 1: al ingresar una opción inválida, sólo pide una vez más la operación matemática.
+//Opción 1: al ingresar una opción inválida, sólo pide una vez más la operación matemática.
 
 /*const num1 = parseInt(prompt('Por favor introduzca un primer número: '));
 const num2 = parseInt(prompt('Ingrese un segundo valor: '));
