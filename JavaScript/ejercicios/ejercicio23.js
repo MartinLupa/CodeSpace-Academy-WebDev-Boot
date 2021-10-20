@@ -73,6 +73,10 @@ let count = 0;
 
 while (count < 15) {
   count++;
+
+  num = 0; //Resets the num value.
+  line = []; //Resets the array.
+  //If there is no reset, each while loop will only console.log an already formed Array, and not form a new one each loop, which was the idea of the excercise.
   while (num < 5) {
     num++;
     line.push(num);
