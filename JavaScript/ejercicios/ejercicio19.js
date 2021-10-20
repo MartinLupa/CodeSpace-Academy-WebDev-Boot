@@ -3,17 +3,28 @@ Dada una secuencia de longitud indefinida de números leídos por teclado, que a
 ejemplo: 5,3,0,2,4,4,0,0,2,3,6,0,……,-1; Realizar el algoritmo que calcule la media aritmética.
 Suponemos que el usuario no insertará número negativos.
 */
+var prompt = require("prompt-sync")();
 
-const numArr = [5, 3, 0, 2, 4, 4, 0, 0, 2, 3, 6, 0, -1];
-let totalSum = 0;
+let num = parseInt(
+  prompt("Please introduce a number sequence. Enter -1 to finish: ")
+);
 
-//OPTION 1: Supposing that the -1 is the parameter that finishes the array and will ALWAYS be the ending value of the array.
-for (i = 0; i < numArr.length - 1; i++) {
-  totalSum += numArr[i];
+let count = 0;
+let nAmount = 0;
+
+while (num != -1) {
+  count += num;
+  nAmount += 1;
+  num = parseInt(
+    prompt("Please introduce a number sequence. Enter -1 to finish: ")
+  );
 }
-let average = totalSum / (numArr.length - 1);
 
-console.log(`Total: ${totalSum}`);
-console.log(`Average: ${average}`);
-
-//OPTION 2: supposing -1 can be in any position of the array, but it is still the value that determines the end of the array we want to calculate the values with.
+if (nAmount === 0) {
+  console.log("No number was introduced.");
+} else {
+  console.log(`N: ${nAmount}`);
+  const average = count / nAmount;
+  console.log(`Sum: ${count}`);
+  console.log(`Average: ${average}`);
+}
