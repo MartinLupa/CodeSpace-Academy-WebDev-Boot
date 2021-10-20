@@ -38,13 +38,11 @@ for (let i = 0; i < catTabla.length; i++) {
 // ------------------- OPCION 3: solución con FOR LOOP y funciones. -------------------
 //Incorpora validación de categorias de 1 a 4 y repregunta en caso de invalido. Uso de RECURSIÓN.
 
-let categoria = 0;
 function preguntaCat() {
   categoria = parseInt(prompt("Ingrese su categoría: "));
   return categoria;
 }
 
-let sueldo = 0;
 function preguntaSueldo() {
   sueldo = parseInt(prompt("Ingrese su sueldo: "));
   return sueldo;
@@ -52,12 +50,13 @@ function preguntaSueldo() {
 
 function informaAumento() {
   let nuevoSueldo = 0;
-  preguntaCat();
+  let categoria = preguntaCat();
+
   if (categoria < 1 || categoria > 4) {
     console.log("Por favor ingrese una categoria válida");
     informaAumento(); //Uso de recursión.
   } else {
-    preguntaSueldo();
+    let sueldo = preguntaSueldo();
     for (let i = 0; i < catTabla.length; i++) {
       if (categoria === catTabla[i].cat) {
         nuevoSueldo = sueldo * (1 + catTabla[i].aum);
