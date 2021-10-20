@@ -6,7 +6,7 @@ febrero de 2006”. El año debe ser mayor que 0. (Recuerda la estructura switch
 
 OPCION: Introducir control de año bisiesto (leap year).
 */
-
+/*
 var prompt = require("prompt-sync")();
 
 let day = parseInt(prompt("Día: "));
@@ -65,3 +65,18 @@ switch (month) {
 }
 
 console.log(`${day} de ${monthName} de ${year}`);
+*/
+
+let num = 0;
+let line = [];
+let count = 0;
+
+while (count < 15) {
+  count++;
+  while (num < 5) {
+    num++;
+    line.push(num);
+  }
+  console.log(`Linea ${count}`);
+  console.log(line);
+}
