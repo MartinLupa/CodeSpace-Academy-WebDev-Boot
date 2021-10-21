@@ -6,67 +6,68 @@ febrero de 2006”. El año debe ser mayor que 0. (Recuerda la estructura switch
 
 OPCION: Introducir control de año bisiesto (leap year).
 */
-/*
-var prompt = require("prompt-sync")();
 
-let day = parseInt(prompt("Día: "));
-let month = parseInt(prompt("Mes: "));
-let year = parseInt(prompt("Año: "));
-let monthName = "";
+var prompt = require('prompt-sync')();
+
+let day = parseInt(prompt('Día: '));
+let month = parseInt(prompt('Mes: '));
+let year = parseInt(prompt('Año: '));
+let monthName = '';
 
 while (day <= 0 || day > 31 || month > 12 || year < 1) {
-  console.log("Por favor introduce una fecha válida");
-  day = parseInt(prompt("Día: "));
-  month = parseInt(prompt("Mes: "));
-  year = parseInt(prompt("Año: "));
+  console.log('Por favor introduce una fecha válida');
+  day = parseInt(prompt('Día: '));
+  month = parseInt(prompt('Mes: '));
+  year = parseInt(prompt('Año: '));
 }
 
 switch (month) {
   case 1:
-    monthName = "Enero";
+    monthName = 'Enero';
     break;
   case 2:
-    monthName = "Febrero";
+    monthName = 'Febrero';
     break;
   case 3:
-    monthName = "Marzo";
+    monthName = 'Marzo';
     break;
   case 4:
-    monthName = "Abril";
+    monthName = 'Abril';
     break;
   case 5:
-    monthName = "Mayo";
+    monthName = 'Mayo';
     break;
   case 6:
-    monthName = "Junio";
+    monthName = 'Junio';
     break;
   case 7:
-    monthName = "Julio";
+    monthName = 'Julio';
     break;
   case 8:
-    monthName = "Agosto";
+    monthName = 'Agosto';
     break;
   case 9:
-    monthName = "Septiembre";
+    monthName = 'Septiembre';
     break;
   case 10:
-    monthName = "Octubre";
+    monthName = 'Octubre';
     break;
   case 11:
-    monthName = "Noviembre";
+    monthName = 'Noviembre';
     break;
   case 12:
-    monthName = "Diciembre";
+    monthName = 'Diciembre';
     break;
 
   default:
-    monthName = "invalid";
+    monthName = 'invalid';
     break;
 }
 
 console.log(`${day} de ${monthName} de ${year}`);
-*/
 
+/*
+//Extra excercise.
 let num = 0;
 let line = [];
 let count = 0;
@@ -84,3 +85,4 @@ while (count < 15) {
   console.log(`Linea ${count}`);
   console.log(line);
 }
+*/
