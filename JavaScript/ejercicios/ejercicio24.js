@@ -1,21 +1,51 @@
 var prompt = require('prompt-sync')();
 
 let studentName;
-let studentList = [];
 
 do {
-  studentName = prompt('Student name: ');
-  let practical = parseInt(prompt('Practical grade:'));
-  let problemSolving = parseInt(prompt('Problem solving grade:'));
-  let theory = parseInt(prompt('Theory grade:'));
-  let finalGrade = 0.1 * practical + 0.5 * problemSolving + 0.4 * theory;
+  studentName = prompt('Introduce nombre del estudiante: ');
+  if (studentName !== '') {
+    let practiceGrade = parseInt(prompt('Nota práctica: '));
+    let probSolvGrade = parseInt(prompt('Nota solución de problemas: '));
+    let theoryGrade = parseInt(prompt('Nota teoría: '));
 
-  let student = {
-    name: studentName,
-    grades: { pr: practical, prblm: problemSolving, th: theory },
-  };
-  studentList.push(student);
-  for (i=0; )
-  console.log(studentList);
-  console.log();
-} while (studentName != ' ');
+    if (
+      practiceGrade < 0 ||
+      practiceGrade > 10 ||
+      probSolvGrade < 0 ||
+      probSolvGrade > 10 ||
+      theoryGrade < 0 ||
+      theoryGrade > 10
+    ) {
+      console.log('Error. Introduzca nota entre 0 y 10.');
+    } else {
+      let finalGrade =
+        0.1 * practiceGrade + 0.5 * probSolvGrade + 0.4 * theoryGrade;
+      console.log(finalGrade);
+    }
+  }
+} while (studentName !== '');
+
+studentName = prompt('Introduce nombre del estudiante: ');
+
+while (studentName != '') {
+  let practiceGrade = parseInt(prompt('Nota práctica: '));
+  let probSolvGrade = parseInt(prompt('Nota solución de problemas: '));
+  let theoryGrade = parseInt(prompt('Nota teoría: '));
+
+  if (
+    practiceGrade < 0 ||
+    practiceGrade > 10 ||
+    probSolvGrade < 0 ||
+    probSolvGrade > 10 ||
+    theoryGrade < 0 ||
+    theoryGrade > 10
+  ) {
+    console.log('Error. Introduzca nota entre 0 y 10.');
+  } else {
+    let finalGrade =
+      0.1 * practiceGrade + 0.5 * probSolvGrade + 0.4 * theoryGrade;
+    console.log(finalGrade);
+  }
+  studentName = prompt('Introduce nombre del estudiante: ');
+}
