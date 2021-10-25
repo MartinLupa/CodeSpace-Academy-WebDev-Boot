@@ -24,25 +24,23 @@ while (counter <= N + 8) {
   }
 }*/
 
-let N = parseInt(prompt('Specify N: '));
-let counter = N;
+let N = Number(prompt('Introduce N: '));
+
+let initialNumber = N;
+
+if (initialNumber % 2 !== 0) {
+  //Me aseguro que initialNumber va a ser el primer numero a sumar
+  initialNumber = initialNumber + 1;
+}
+
+let count = 0;
 let sum = 0;
 
-if (N % 2 === 0) {
-  while (counter <= N + 8) {
-    counter += 2;
-    console.log(counter);
-    sum += counter;
-  }
-  console.log(sum);
+while (count < N) {
+  sum = sum + initialNumber;
+  console.log(initialNumber);
+  initialNumber = initialNumber + 2;
+  count = count + 1;
 }
 
-if (N % 2 === 1) {
-  counter += 1;
-  while (counter <= N + 8) {
-    counter += 2;
-    sum += counter;
-    console.log(counter);
-  }
-  console.log(sum);
-}
+console.log('Suma', sum);
