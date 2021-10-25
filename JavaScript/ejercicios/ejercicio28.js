@@ -9,16 +9,11 @@ Desarrollar un timer o temporizador. La cantidad de segundos con la que se quier
 Cuando llegue al final, se imprimirá "¡¡Ring!!“ y el programa acabará.•Investigar cómo hacer los intervalos en JS
 */
 
-<<<<<<< HEAD
 let time = parseInt(prompt("Introduzca tiempo: "));
 /*
 
 ver setInterval() y clearInterval();
 
-=======
-let time = parseInt(prompt('Introduzca tiempo: '));
-/*
->>>>>>> a9ade9d7c23b68080731b17d80285d5516ef30c3
 for (let i = time; i >= 0; i--) {
   if (i > 1) {
     console.log(`${i} segundos restantes.`);
@@ -29,7 +24,6 @@ for (let i = time; i >= 0; i--) {
   }
 }
 */
-<<<<<<< HEAD
 
 const timer = setInterval(function () {
   if (time === 0) {
@@ -43,5 +37,3 @@ const timer = setInterval(function () {
     time--;
   }
 }, 1000);
-=======
->>>>>>> a9ade9d7c23b68080731b17d80285d5516ef30c3

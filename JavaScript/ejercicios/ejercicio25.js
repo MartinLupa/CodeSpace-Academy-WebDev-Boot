@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var prompt = require("prompt-sync")();
 
 /*
@@ -26,17 +25,3 @@ for (let row = 1; row <= N; row++) {
   }
   console.log(line);
 }
-=======
-var prompt = require('prompt-sync')();
-
-let lado = parseInt(prompt('Largo de lados: '));
-let unit = '*';
-let space = ' ';
-
-console.log(unit.repeat(lado));
-
-for (j = 0; j < lado - 2; j++) {
-  console.log(unit, space.repeat(lado - 4), unit);
-}
-console.log(unit.repeat(lado));
->>>>>>> a9ade9d7c23b68080731b17d80285d5516ef30c3
