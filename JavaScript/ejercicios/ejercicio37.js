@@ -31,6 +31,7 @@ Posicion     Letra
 */
 
 let DNI = Number(prompt("Introduce tu DNI: "));
+console.log(DNI.length());
 let letterIndex = DNI % 23;
 let letterArray = [
   "T",
