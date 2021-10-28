@@ -1,15 +1,11 @@
-<<<<<<< HEAD
-var prompt = require("prompt-sync")();
-
-=======
 var prompt = require('prompt-sync')();
->>>>>>> a9ade9d7c23b68080731b17d80285d5516ef30c3
+
 /*
 Desarrollar un timer o temporizador. La cantidad de segundos con la que se quiere hacer la cuenta atrás se introducirá por teclado. 
 Cuando llegue al final, se imprimirá "¡¡Ring!!“ y el programa acabará.•Investigar cómo hacer los intervalos en JS
 */
 
-let time = parseInt(prompt("Introduzca tiempo: "));
+let time = parseInt(prompt('Introduzca tiempo: '));
 /*
 
 ver setInterval() y clearInterval();
@@ -28,7 +24,7 @@ for (let i = time; i >= 0; i--) {
 const timer = setInterval(function () {
   if (time === 0) {
     clearInterval(timer);
-    console.log("Ring");
+    console.log('Ring');
   } else if (time === 1) {
     console.log(`${time} segundo restante.`);
     time--;
