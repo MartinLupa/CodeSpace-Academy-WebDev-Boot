@@ -1,4 +1,4 @@
-var prompt = require('prompt-sync')();
+var prompt = require("prompt-sync")();
 /*
 Dado un array de N números enteros que se generen aleatoriamente, hacer un algoritmo que:
 a)Obtenga cuántos números son mayores que 0.
@@ -6,7 +6,7 @@ b)Calcule el promedio de los números positivos.
 c)Obtenga el promedio de todos los números.
 */
 
-const N = parseInt(prompt('Introduce N: '));
+const N = parseInt(prompt("Introduce N: "));
 let array = [];
 
 //The random mixer consist of generating a random number between 1 and 0.
@@ -17,10 +17,10 @@ let array = [];
 while (array.length < N) {
   let randomMixer = Math.random();
   if (randomMixer > 0.5) {
-    let positiveRandom = Math.floor(Math.random() * (N / 2)) + 1;
+    let positiveRandom = Math.floor(Math.random() * N) + 1;
     array.push(positiveRandom);
   } else {
-    let negativeRandom = Math.floor(Math.random() * (-N / 2)) + 1;
+    let negativeRandom = Math.floor(Math.random() * -N) + 1;
     array.push(negativeRandom);
   }
 }
@@ -55,4 +55,4 @@ for (k = 0; k < array.length; k++) {
   totalSum += array[k];
 }
 let totalAverage = totalSum / array.length;
-console.log(`The average of all numbers is: ${totalAverage}`);
+console.log(`A) The average of all numbers is: ${totalAverage}`);
