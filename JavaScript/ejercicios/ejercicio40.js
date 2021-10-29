@@ -1,7 +1,7 @@
 /*
 Generar un array de 20 elementos con números aleatorios no repetidos entre sí.
 */
-
+//No funciona
 let array = [];
 
 while (array.length < 20) {

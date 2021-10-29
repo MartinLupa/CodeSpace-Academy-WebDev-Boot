@@ -1,23 +1,9 @@
-var prompt = require('prompt-sync')();
+var prompt = require("prompt-sync")();
 /*
 Partir del ejercicio 28 pero esta vez realizar un reloj digital completo que nunca pare. 
 Tendrá la estructura horas:minutos:segundos. Ejemplo de salida: 23:15:39
 Nota: deberás utilizar “Esperar” y “Limpiar pantalla”.
 */
-
-// Ejercicio28
-// const timer = setInterval(function () {
-//   if (time === 0) {
-//     clearInterval(timer);
-//     console.log("Ring");
-//   } else if (time === 1) {
-//     console.log(`${time} segundo restante.`);
-//     time--;
-//   } else {
-//     console.log(`${time} segundos restantes.`);
-//     time--;
-//   }
-// }, 1000);
 
 function clock() {
   setInterval(function () {
