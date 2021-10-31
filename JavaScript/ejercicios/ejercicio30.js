@@ -1,4 +1,4 @@
-var prompt = require("prompt-sync")();
+var prompt = require('prompt-sync')();
 /*
 Escribir un algoritmo que muestre por pantalla un triángulo como los siguientes hasta un número
  de filas introducido por teclado.
@@ -20,44 +20,42 @@ Escribir un algoritmo que muestre por pantalla un triángulo como los siguientes
  456
  78910
 */
-let N = parseInt(prompt("Introduce N: "));
+let N = parseInt(prompt('Introduce N: '));
 
 //A)
-/*
-let listA = "";
+let listA = '';
 for (i = 1; i <= N; i++) {
   console.log((listA += i));
 }
-console.log("------------------");
-*/
-//B)
-/*
-for (i = 1; i <= N; i++) {
-  let line = i.toString();
-  console.log(line.repeat(i));
-}*/
+console.log('------------------');
 
+//B)
+//Opcion1
+// for (i = 1; i <= N; i++) {
+//   let line = i.toString();
+//   console.log(line.repeat(i));
+// }
+
+//Opcion2
 for (let row = 1; row <= N; row++) {
-  let line = "";
+  let line = '';
   for (let column = 1; column <= row; column++) {
     line += row;
   }
   console.log(line);
 }
-console.log("------------------");
+console.log('------------------');
 
 //C)
-/*
 for (i = 1; i <= N; i++) {}
-console.log("------------------");
 
 let count = 1;
 for (let row = 1; row <= N; row++) {
-  let line = "";
+  let line = '';
   for (let column = 1; column <= row; column++) {
-    line += count + " ";
+    line += count + ' ';
     count++;
   }
   console.log(line);
 }
-*/
+console.log('------------------');

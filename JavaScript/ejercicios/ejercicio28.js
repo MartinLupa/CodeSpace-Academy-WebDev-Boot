@@ -6,20 +6,6 @@ Cuando llegue al final, se imprimirá "¡¡Ring!!“ y el programa acabará.•I
 */
 
 let time = parseInt(prompt('Introduzca tiempo: '));
-/*
-
-ver setInterval() y clearInterval();
-
-for (let i = time; i >= 0; i--) {
-  if (i > 1) {
-    console.log(`${i} segundos restantes.`);
-  } else if (i === 1) {
-    console.log(`${i} segundo restante.`);
-  } else {
-    console.log("Ring!!!!");
-  }
-}
-*/
 
 const timer = setInterval(function () {
   if (time === 0) {

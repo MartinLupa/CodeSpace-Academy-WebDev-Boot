@@ -1,15 +1,18 @@
 /*
 Generar un array de 20 elementos con números aleatorios no repetidos entre sí.
 */
-//No funciona
-let array = [];
 
-while (array.length < 20) {
-  let randomNum = Math.floor(Math.random() * 20) + 1;
-  array.push(randomNum);
-  if (array.find((element) => element == randomNum)) {
-    randomNum = Math.floor(Math.random() * 20) + 1;
-    array[array.length - 1] = randomNum;
+function generateRandomArray() {
+  let randomArray = [];
+
+  while (randomArray.length < 20) {
+    let randomNum = Math.floor(Math.random() * 20 + 1); //Random numbers between 1 and 100
+    if (randomArray.includes(randomNum)) {
+      generateRandomArray; //Recursion used to generate other random number in case of a coincident one being found in the randomArray.
+    } else {
+      randomArray.push(randomNum);
+    }
   }
+  console.log(randomArray);
 }
-console.log(array);
+generateRandomArray();

@@ -1,4 +1,4 @@
-var prompt = require("prompt-sync")();
+var prompt = require('prompt-sync')();
 /*
 El siguiente es el menú de un restaurante de bocadillos. Diseñar un algoritmo capaz de leer 
 el número de unidades consumidas de cada alimento ordenado y calcular la cuenta total. 
@@ -12,7 +12,7 @@ Cerveza                  0.75
 Pan                      2.00
 */
 //OPTION A: with two different arrays. One for product, other for price.
-let product = ["Bocadillo de jamón", "Refresco", "Cerveza", "Pan"];
+let product = ['Bocadillo de jamón', 'Refresco', 'Cerveza', 'Pan'];
 let price = [1.5, 1.05, 0.75, 2];
 let totalAmount = 0;
 
@@ -21,12 +21,12 @@ for (i = 0; i < product.length; i++) {
   totalAmount += price[i] * consumed;
 }
 
-console.log(`The total is: ${totalAmount}`);
+console.log(`The total is: $${totalAmount}`);
 
 //OPTION B: with an object of products.
 const menu = [
-  { prod: "sandwich", price: 1.5 },
-  { prod: "soda", price: 1.05 },
-  { prod: "beer", price: 0.75 },
-  { prod: "bread", price: 2 },
+  { prod: 'sandwich', price: 1.5 },
+  { prod: 'soda', price: 1.05 },
+  { prod: 'beer', price: 0.75 },
+  { prod: 'bread', price: 2 },
 ];
