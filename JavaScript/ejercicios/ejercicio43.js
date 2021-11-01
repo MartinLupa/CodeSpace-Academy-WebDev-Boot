@@ -18,3 +18,28 @@ function clock() {
   }, 1000);
 }
 clock();
+
+//Alvaro:
+// function clock() {
+//   setInterval(function () {
+//     let date = new Date();
+//     let seconds = date.getSeconds();
+//     let minutes = date.getMinutes();
+//     let hours = date.getHours();
+
+//     if (hours < 10) {
+//       hours = 0 + hours;
+//     }
+//     if (minutes < 10) {
+//       minutes = 0 + minutes;
+//     }
+//     if (seconds < 10) {
+//       seconds = 0 + seconds;
+//     }
+//     console.log('hour: ', hours, 'minutos: ', minutes, 'segundos: ', seconds);
+//     setInterval(function () {
+//       console.clear();
+//     }, 1000);
+//   }, 1000);
+// }
+// clock();
