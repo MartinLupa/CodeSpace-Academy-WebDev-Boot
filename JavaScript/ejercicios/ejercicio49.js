@@ -12,6 +12,7 @@ d)¿Cuál fue el que tuvo menor coste de producción en diciembre?
 //The function checks whether the max/min value has ocurred more than once and also prints
 //the months where the max/min value happened.
 const sweetCosts2021 = [
+  { id: 'Sweets annual costs - 2021' },
   { month: 'Jan', cost: 6000 },
   { month: 'Feb', cost: 10000 },
   { month: 'Mar', cost: 10000 },
@@ -27,6 +28,7 @@ const sweetCosts2021 = [
 ];
 
 const drinksCosts2021 = [
+  { id: 'Drinks annual costs - 2021' },
   { month: 'Jan', cost: 10000 },
   { month: 'Feb', cost: 5000 },
   { month: 'Mar', cost: 10000 },
@@ -42,6 +44,7 @@ const drinksCosts2021 = [
 ];
 
 const cannedCosts2021 = [
+  { id: 'Canned annual costs - 2021' },
   { month: 'Jan', cost: 10000 },
   { month: 'Feb', cost: 10000 },
   { month: 'Mar', cost: 10000 },
@@ -55,14 +58,13 @@ const cannedCosts2021 = [
   { month: 'Nov', cost: 10000 },
   { month: 'Dec', cost: 10000 },
 ];
-
-function costingStats(costsArray) {
+function maxMinCost(costsArray) {
   let maxCost = 0;
   let minCost = 999999999;
   let maxCostMonth = [];
   let minCostMonth = [];
 
-  for (i = 0; i < costsArray.length; i++) {
+  for (i = 1; i < costsArray.length; i++) {
     if (costsArray[i].cost >= maxCost) {
       maxCost = costsArray[i].cost;
     }
@@ -70,7 +72,7 @@ function costingStats(costsArray) {
       minCost = costsArray[i].cost;
     }
   }
-  for (j = 0; j < costsArray.length; j++) {
+  for (j = 1; j < costsArray.length; j++) {
     if (costsArray[j].cost == maxCost) {
       maxCostMonth.push(costsArray[j].month);
     }
@@ -78,10 +80,31 @@ function costingStats(costsArray) {
       minCostMonth.push(costsArray[j].month);
     }
   }
-
+  console.log('---------------------------');
+  console.log(costsArray[0].id);
   console.log('Maximum cost of the period:', maxCost);
   console.log('Maximum cost ocurred in: ', maxCostMonth);
   console.log('Minimum cost of the period:', minCost);
   console.log('Minimum cost ocurred in: ', minCostMonth);
 }
+
+function annualAverage(costsArray) {
+  let annualCost = 0;
+  let annualAverage = 0;
+  for (i = 1; i < costsArray.length; i++) {
+    annualCost = annualCost + costsArray[i].cost;
+  }
+  annualAverage = annualCost / 12;
+  console.log('');
+  console.log(`Annual average is: ${annualAverage}`);
+}
+
+function costingStats(costsArray) {
+  maxMinCost(costsArray);
+  annualAverage(costsArray);
+}
+
+//Functions call
 costingStats(sweetCosts2021);
+costingStats(drinksCosts2021);
+costingStats(cannedCosts2021);
