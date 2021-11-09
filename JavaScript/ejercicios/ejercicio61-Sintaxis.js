@@ -323,3 +323,5 @@ const capitalize = (str) => {
 //capitalize('comprobaré los errores de la consola antes de pedir ayuda.');
 
 // 29. Crea una función en una única línea que reciba un valor lógico y devuelva el opuesto.
+const oposite = (value) => !value;
+//console.log(oposite(true));
