@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+#container {
+  text-align: center;
+  margin: 100px 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.select {
+  padding: 5px;
+  width: 400px;
+  margin: auto;
+}
+
+.increaseBtn,
+.emptyBtn {
+  padding: 10px;
+  width: 198px;
+  margin: 10px 2px;
+}

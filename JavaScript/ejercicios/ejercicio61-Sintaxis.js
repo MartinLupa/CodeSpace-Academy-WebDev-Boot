@@ -137,7 +137,10 @@ function strictEquality(arg1, arg2) {
     console.log('Not equal');
   }
 }
-//strictEquality(5, 5);
+//strictEquality(5, null);
+
+// console.log(typeof { name: 'Martin' });
+// console.log(typeof null);
 
 //15. Crea una función que reciba dos strings y devuelva true si tienen la misma longitud y false en caso contrario.
 function equalLength(str1, str2) {

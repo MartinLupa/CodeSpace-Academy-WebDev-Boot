@@ -37,25 +37,25 @@ console.log('------------------');
 // }
 
 //Opcion2
-for (let row = 1; row <= N; row++) {
-  let line = '';
-  for (let column = 1; column <= row; column++) {
-    line += row;
-  }
-  console.log(line);
-}
-console.log('------------------');
+// for (let row = 1; row <= N; row++) {
+//   let line = '';
+//   for (let column = 1; column <= row; column++) {
+//     line += row;
+//   }
+//   console.log(line);
+// }
+// console.log('------------------');
 
 //C)
-for (i = 1; i <= N; i++) {}
+// for (i = 1; i <= N; i++) {}
 
-let count = 1;
-for (let row = 1; row <= N; row++) {
-  let line = '';
-  for (let column = 1; column <= row; column++) {
-    line += count + ' ';
-    count++;
-  }
-  console.log(line);
-}
-console.log('------------------');
+// let count = 1;
+// for (let row = 1; row <= N; row++) {
+//   let line = '';
+//   for (let column = 1; column <= row; column++) {
+//     line += count + ' ';
+//     count++;
+//   }
+//   console.log(line);
+// }
+// console.log('------------------');
