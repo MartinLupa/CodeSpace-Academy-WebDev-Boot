@@ -8,11 +8,17 @@ form.addEventListener("submit", (e) => {
   getPokemon(pokeName);
 });
 
-function getPokemon(pokeName) {
-  fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
-    .then((response) => response.json())
-    .then((data) => createPokemon(data));
-}
+const getPokemon = async function (pokeName) {
+  try {
+    const response = await fetch(
+      `https://pokeapi.co/api/v2/pokemon/${pokeName}`
+    );
+    const data = await response.json();
+    createPokemon(data);
+  } catch (err) {
+    console.log("ERROR", err);
+  }
+};
 
 function createPokemon(pokemon) {
   const h3 = document.createElement("h3");
