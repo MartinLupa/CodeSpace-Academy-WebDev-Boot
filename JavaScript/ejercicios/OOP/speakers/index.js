@@ -10,11 +10,20 @@
 //12 Crear una clase HomeCinema, tendrá todos los altavoces que hayamos definido anteriormente y será capaz de manipular todos los altavoces,
 //tanto apagarlos como cambiarles el volumen.
 
+//
+
+class Altavoz {
+  talk() {
+    console.log('Hola, soy un altavoz');
+  }
+}
+
 class Speaker {
-  constructor(isOn = false, volume) {
+  constructor(brand, isOn = false, volume) {
     if (!isOn) {
       volume = 0;
     }
+    this.brand = brand;
     this.isOn = isOn;
     this.volume = volume;
   }
@@ -22,6 +31,16 @@ class Speaker {
   turnOn() {
     this.isOn = true;
     this.volume = 20;
+  }
+  talk() {
+    return `Hola soy ${this.brand} y estoy sonando.`;
+  }
+
+  setMarca(marca) {
+    if (typeof marca === 'string') {
+      return (this.marca = marca);
+    }
+    console.log('Dame un string');
   }
 
   turnOff() {
@@ -50,25 +69,31 @@ class Speaker {
   print() {
     this.isOn
       ? console.log(`El altavoz está encendido y su volumen es ${this.volume}`)
-      : onsole.log("El altavoz está apagado.");
+      : onsole.log('El altavoz está apagado.');
   }
 }
 
-const speaker1 = new Speaker();
-console.log("---------------Estado inicial -------------------");
-console.log(speaker1);
-console.log("--------- Encendido, volumen a 20 ---------------");
-speaker1.turnOn();
-console.log(speaker1);
-console.log("----------------- Vol a 50 ----------------------");
-speaker1.setVolume(50);
-console.log(speaker1);
-console.log("------------------ Muteado ----------------------");
-speaker1.mute();
-console.log(speaker1);
-console.log("-----------------Subir volumen ------------------");
-speaker1.volumeUp();
-console.log(speaker1);
-console.log("------------------- Apagado ---------------------");
-speaker1.turnOff();
-console.log(speaker1);
+const speaker1 = new Speaker('Toshiba');
+const talk = speaker1.talk();
+speaker1.setMarca('JBL');
+console.log(speaker1.marca);
+
+// console.log('---------------Estado inicial -------------------');
+// console.log(speaker1);
+// console.log('--------- Encendido, volumen a 20 ---------------');
+// speaker1.turnOn();
+// console.log(speaker1);
+// console.log('----------------- Vol a 50 ----------------------');
+// speaker1.setVolume(50);
+// console.log(speaker1);
+// console.log('------------------ Muteado ----------------------');
+// speaker1.mute();
+// console.log(speaker1);
+// console.log('-----------------Subir volumen ------------------');
+// speaker1.volumeUp();
+// console.log(speaker1);
+// console.log('------------------- Apagado ---------------------');
+// speaker1.turnOff();
+// console.log(speaker1);
+// speaker1.getVolume();
+// console.log(talk);

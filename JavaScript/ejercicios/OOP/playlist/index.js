@@ -21,63 +21,55 @@
 //  que tiene almacenadas de mayor a menor duración.
 // */
 //
-// class Song {
-// constructor(title, group, duration, rating) {
-// this.title = title;
-// this.group = group;
-// this.duration = duration;
-// this.rating = rating;
-// }
-// print(title) {
-// console.log(
-// `La canción ${this.title} me encanta y en Apple sólo le dan ${this.rating} estrellas.`
-// );
-// }
-// }
-//
-// class Playlist {
-// constructor(playlist = []) {
-// this.playlist = playlist;
-// }
-//
-// printPlaylist() {
-// console.log(this.playlist);
-// }
-//
-// addSong(...songs) {
-// this.playlist.push(...songs);
-// }
-//
-// getDuration() {
-// let totalDuration = 0;
-// this.playlist.forEach((song) => (totalDuration += song.duration));
-// console.log(totalDuration);
-// }
-//
-// removeSong(song) {
-// const songIndex = this.playlist.indexOf(song);
-// this.playlist.splice(songIndex, 1);
-// console.log(`${this.playlist[songIndex].title} eliminada de la playlist`);
-// }
-// }
-//
-// const playlist = new Playlist();
-// const song1 = new Song("title1", "group1", 4, 4);
-// const song2 = new Song("title2", "group2", 4, 4);
-// const song3 = new Song("title3", "group3", 4, 4);
-// const song4 = new Song("title4", "group4", 4, 4);
-// const song5 = new Song("title5", "group5", 4, 4);
-// const song6 = new Song("title6", "group6", 4, 4);
-// const song7 = new Song("title7", "group7", 4, 4);
-// const song8 = new Song("title8", "group8", 4, 4);
-//
-// playlist.addSong(song1, song2, song3, song4, song5, song6, song7, song8);
-// playlist.printPlaylist();
-
-function makeRequest() {
-  fetch("https://pokeapi.co/api/v2/{endpoint}/")
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+class Song {
+  constructor(title, group, duration, rating) {
+    this.title = title;
+    this.group = group;
+    this.duration = duration;
+    this.rating = rating;
+  }
+  print(title) {
+    console.log(
+      `La canción ${this.title} me encanta y en Apple sólo le dan ${this.rating} estrellas.`
+    );
+  }
 }
 
-makeRequest();
+class Playlist {
+  constructor(playlist = []) {
+    this.playlist = playlist;
+  }
+
+  printPlaylist() {
+    console.log(this.playlist);
+  }
+
+  addSong(...songs) {
+    this.playlist.push(...songs);
+  }
+
+  getDuration() {
+    let totalDuration = 0;
+    this.playlist.forEach((song) => (totalDuration += song.duration));
+    console.log(totalDuration);
+  }
+
+  removeSong(song) {
+    const songIndex = this.playlist.indexOf(song);
+    this.playlist.splice(songIndex, 1);
+    console.log(`${this.playlist[songIndex].title} eliminada de la playlist`);
+  }
+}
+
+const playlist = new Playlist();
+const song1 = new Song('title1', 'group1', 4, 4);
+const song2 = new Song('title2', 'group2', 4, 4);
+const song3 = new Song('title3', 'group3', 4, 4);
+const song4 = new Song('title4', 'group4', 4, 4);
+const song5 = new Song('title5', 'group5', 4, 4);
+const song6 = new Song('title6', 'group6', 4, 4);
+const song7 = new Song('title7', 'group7', 4, 4);
+const song8 = new Song('title8', 'group8', 4, 4);
+
+playlist.addSong(song1, song2, song3, song4, song5, song6, song7, song8);
+playlist.printPlaylist();

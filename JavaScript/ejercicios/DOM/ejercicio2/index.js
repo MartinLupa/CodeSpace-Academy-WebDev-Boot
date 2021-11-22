@@ -43,7 +43,7 @@ class User {
 }
 
 //Creating Users
-user1 = new User(
+const user1 = new User(
   'Martín',
   'Lupa',
   'Groppelli',
@@ -52,7 +52,7 @@ user1 = new User(
   'Málaga',
   2
 );
-user2 = new User(
+const user2 = new User(
   'Pablo',
   'Lupa',
   'Groppelli',
@@ -61,7 +61,7 @@ user2 = new User(
   'Málaga',
   2
 );
-user3 = new User(
+const user3 = new User(
   'Gabriel',
   'Gonnet',
   'Eichenberger',
@@ -70,7 +70,7 @@ user3 = new User(
   'Málaga',
   2
 );
-user4 = new User(
+const user4 = new User(
   'Franco',
   'Polo',
   'Bianchi',
@@ -79,8 +79,16 @@ user4 = new User(
   'Málaga',
   2
 );
-user5 = new User('Jose', 'Loro', 'Lopez', 'email@email.com', 32, 'Málaga', 2);
-user6 = new User(
+const user5 = new User(
+  'Jose',
+  'Loro',
+  'Lopez',
+  'email@email.com',
+  32,
+  'Málaga',
+  2
+);
+const user6 = new User(
   'Pepito',
   'Pepin',
   'Pepon',
@@ -93,7 +101,6 @@ user6 = new User(
 //Populating my "Database"
 const usersArray = [user1, user2, user3, user4, user5, user6];
 //console.log(usersArray);
-console.log(usersArray);
 
 //Creating select and option elements and populating it with DB.
 const container = document.querySelector('#container');
@@ -125,41 +132,21 @@ emptyBtn.innerText = 'Empty cart';
 emptyBtn.setAttribute('class', 'emptyBtn');
 btnContainer.appendChild(emptyBtn);
 
-//Creating list and rendering selected user info.
-const option = document.querySelectorAll('option');
+// Creating list and rendering selected user info.
 usersInput.addEventListener('change', (e) => {
   let userSelector = e.target.value;
-  let selectedUser = usersArray[userSelector];
-  console.log(selectedUser);
-  const dataList = document.createElement('ul');
-  //------------------------------
-  let infoRow = document.createElement('li');
-  infoRow.innerText = selectedUser.keys(name);
-  dataList.appendChild(infoRow);
-  //------------------------------
-  let infoRow1 = document.createElement('li');
-  infoRow1.innerText = selectedUser.firstSurname;
-  dataList.appendChild(infoRow1);
-  //------------------------------
-  let infoRow2 = document.createElement('li');
-  infoRow2.innerText = selectedUser.secondSurname;
-  dataList.appendChild(infoRow2);
-  //------------------------------
-  let infoRow3 = document.createElement('li');
-  infoRow3.innerText = selectedUser.email;
-  dataList.appendChild(infoRow3);
-  //------------------------------
-  let infoRow4 = document.createElement('li');
-  infoRow4.innerText = selectedUser.age;
-  dataList.appendChild(infoRow4);
-  //------------------------------
-  let infoRow5 = document.createElement('li');
-  infoRow5.innerText = selectedUser.city;
-  dataList.appendChild(infoRow5);
-  //------------------------------
-  let infoRow6 = document.createElement('li');
-  infoRow6.innerText = selectedUser.nProducts;
-  dataList.appendChild(infoRow6);
+  let userObject = usersArray[userSelector];
 
-  container.appendChild(dataList);
+  const userKeys = Object.keys(userObject);
+  const userValues = Object.values(userObject);
+  //console.log(userKeys[0], userValues[0]);
+
+  const dataList = document.createElement('ul');
+  dataList.setAttribute('id', 'users-list');
+  container.insertBefore(dataList, btnContainer);
+  for (let i = 0; i < userKeys.length; i++) {
+    let dataRow = document.createElement('li');
+    dataRow.innerHTML = `<p><span>${userKeys[i]}:</span> ${userValues[i]}</p>`;
+    dataList.appendChild(dataRow);
+  }
 });
