@@ -30,7 +30,7 @@ let database = [];
 
 function createEmployees(qty) {
   for (let i = 1; i <= qty; i++) {
-    let randomSalary = 800 + Math.floor(Math.random() * 1500);
+    let randomSalary = 800 + Math.floor(Math.random() * 3500);
     let randomPosition = [
       'Manager',
       'Administrative',
@@ -53,7 +53,7 @@ function createEmployees(qty) {
 }
 
 createEmployees(5);
-//console.log(database);
+console.log('WITHOUT INCREASE', database);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //2. Ordenar el array por rendimiento e imprimirlo. Usar una función anónima como callback.
@@ -70,17 +70,45 @@ function performanceRanking(a, b) {
 }
 
 //Creates new array from sorted database.
-let ranking = Array.from(database.sort(performanceRanking));
+let _performanceRanking = Array.from(database.sort(performanceRanking));
 //Returns best performing employees by ID:
-let rankingId = ranking.map((employee) => employee.id);
-console.log('Best performing employees by ID', rankingId);
+let rankingId = _performanceRanking.map((employee) => employee.id);
+//console.log('Best performing employees by ID', rankingId);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //3. Ordenar el array por salario e imprimirlo. Usar una función de flecha.
+const salaryRanking = (a, b) => {
+  if (a.salary < b.performance) {
+    return 1;
+  }
+  if (a.salary > b.salary) {
+    return -1;
+  }
+  return 0;
+};
+
+let _salaryRanking = Array.from(database.sort(salaryRanking));
+let salaryRankingID = _salaryRanking.map((employee) => employee.id);
+//let salaryAmount = _salaryRanking.map((employee) => employee.salary);
+//console.log('Salary rankingby ID: ', salaryRankingID);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //4. Ordenar el array por el número de empleado de forma decreciente. El número de empleado sólo estará dentro del string Cargo. Usar una función nombrada como callback.
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //5. Usando filter: imprimir el cargo y salario de los que cobren más de 2500€.
+let salaryHigher2500 = database.filter((employee) => employee.salary >= 2500);
+//console.log('Employees with salary of $2500 or higher: ');
+// salaryHigher2500.forEach((employee) => {
+//   console.log(`id: ${employee.id},`, `salary: $${employee.salary}`);
+// });
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //6. Usando forEach: subir el sueldo un 25% a los que cobren menos de 1500€.
+database.forEach((employee) => {
+  if (employee.salary < 1500) {
+    let increase = 1.25;
+    employee.salary = employee.salary * increase;
+    console.log('WITH INCREASE', database);
+  }
+});
