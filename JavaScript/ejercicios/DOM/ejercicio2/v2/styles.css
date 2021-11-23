@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+
+.wrapper {
+  width: 800px;
+}
+
+.list {
+  padding: 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  list-style: none;
+}
+
+.list-row {
+  border: 1px solid rgb(211, 210, 210);
+}
+
+.btn-container {
+  display: flex;
+
+  justify-content: space-between;
+}
+.btn {
+  width: 48%;
+  padding: 10px;
+  margin: 0 0;
+}

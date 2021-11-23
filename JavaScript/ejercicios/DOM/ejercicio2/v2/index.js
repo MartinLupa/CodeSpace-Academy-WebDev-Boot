@@ -51,81 +51,60 @@ class User {
   }
   emptyShoppingCart() {
     this._shoppingCart = [];
+    this._counter = 0;
   }
-
-  //   toStringList() {
-  //     let nameLi = document.createElement("li");
-  //     //nameLi.classList.add('list-group-item')
-  //     nameLi.innerHTML = "Name : " + this._name;
-  //     userDataList.appendChild(nameLi);
-
-  //     let firstSurname = window.document.createElement("li");
-  //     //lastName1.classList.add("list-group-item");
-  //     firstSurname.innerHTML = "Last Name:" + this._firstSurname;
-  //     userDataList.appendChild(firstSurname);
-
-  //     let age = window.document.createElement("li");
-  //     //age.classList.add("list-group-item");
-  //     age.innerHTML = "Age:" + this._age;
-  //     userDataList.appendChild(age);
-
-  //     let city = window.document.createElement("li");
-  //     //city.classList.add("list-group-item");
-  //     city.innerHTML = "City:" + this._city;
-  //     userDataList.appendChild(city);
-  //   }
 }
 
 // 2. Rellenar el array con varios usuarios.
 const user1 = new User(
-  "Martín",
-  "Lupa",
-  "Groppelli",
-  "email@email.com",
+  'Martín',
+  'Lupa',
+  'Groppelli',
+  'email@email.com',
   32,
-  "Málaga"
+  'Málaga'
 );
 const user2 = new User(
-  "Pablo",
-  "Lupa",
-  "Groppelli",
-  "email@email.com",
+  'Pablo',
+  'Lupa',
+  'Groppelli',
+  'email@email.com',
   32,
-  "Málaga"
+  'Málaga'
 );
 const user3 = new User(
-  "Gabriel",
-  "Gonnet",
-  "Eichenberger",
-  "email@email.com",
+  'Gabriel',
+  'Gonnet',
+  'Eichenberger',
+  'email@email.com',
   32,
-  "Málaga"
+  'Málaga'
 );
 const user4 = new User(
-  "Franco",
-  "Polo",
-  "Bianchi",
-  "email@email.com",
+  'Franco',
+  'Polo',
+  'Bianchi',
+  'email@email.com',
   32,
-  "Málaga"
+  'Málaga'
 );
 const user5 = new User(
-  "Jose",
-  "Loro",
-  "Lopez",
-  "email@email.com",
+  'Jose',
+  'Loro',
+  'Lopez',
+  'email@email.com',
   32,
-  "Málaga"
+  'Málaga'
 );
 const user6 = new User(
-  "Pepito",
-  "Pepin",
-  "Pepon",
-  "email@email.com",
+  'Pepito',
+  'Pepin',
+  'Pepon',
+  'email@email.com',
   32,
-  "Málaga"
+  'Málaga'
 );
-let selectedUser;
+let selectedUser = user1;
 const usersDB = [user1, user2, user3, user4, user5, user6];
 //console.log(usersDB);
 
@@ -133,24 +112,25 @@ const usersDB = [user1, user2, user3, user4, user5, user6];
 // guardamos las referencias.
 
 // 4. Rellenamos el selector con el nombre de cada usuario.
-const userSelect = document.querySelector("#userSelect");
+const userSelect = document.querySelector('#userSelect');
 let idCounter = 1;
 usersDB.forEach((user, index) => {
-  let userOption = document.createElement("option");
-  userOption.setAttribute("value", index);
+  let userOption = document.createElement('option');
+  userOption.setAttribute('value', index);
   userOption.innerText = user.getName();
   userSelect.appendChild(userOption);
   idCounter++;
 });
 
-function displayInfo(e) {
-  userDataList.innerHTML = "";
-  let user = usersDB[e.target.value];
+function displayInfo(selectedUser) {
+  userDataList.innerHTML = '';
+
   //Refreshes selectedUser defined previously with current selected user.
-  selectedUser = user;
+  //selectedUser = user;
   console.log(selectedUser);
   for (const key in selectedUser) {
-    let userDataRow = document.createElement("li");
+    let userDataRow = document.createElement('li');
+    userDataRow.setAttribute('class', 'list-row');
     userDataRow.innerText = `${key}: ${selectedUser[key]}`;
     userDataList.appendChild(userDataRow);
   }
@@ -159,19 +139,22 @@ function displayInfo(e) {
 // 5. Rellenamos la lista con todas las propiedades de un usuario cualquiera.
 // 6. Añadir listeners necesarios.
 // 7. Si el selector cambia, actualizamos la lista con toda su información.
-let userDataList = document.querySelector(".list");
-userSelect.addEventListener("change", (e) => {
-  displayInfo(e);
+let userDataList = document.querySelector('.list');
+userSelect.addEventListener('change', (e) => {
+  selectedUser = usersDB[e.target.value];
+  displayInfo(selectedUser);
 });
 
 //let userDataRow = document.createElement("li");
 // 8. Si pulsamos los botones, tendrá que actualizarse el número de productos del usuario seleccionado.
-const addBtn = document.querySelector("#addBtn");
-const emptyBtn = document.querySelector("#emptyBtn");
-
-addBtn.addEventListener("click", (e) => {
+const addBtn = document.querySelector('#addBtn');
+const emptyBtn = document.querySelector('#emptyBtn');
+addBtn.addEventListener('click', () => {
   //console.log(selectedUser);
-  selectedUser.addItem("Producto");
-  displayInfo(e);
+  selectedUser.addItem('Producto');
+  displayInfo(selectedUser);
 });
-// emptyBtn.addEventListener("click");
+emptyBtn.addEventListener('click', () => {
+  selectedUser.emptyShoppingCart();
+  displayInfo(selectedUser);
+});
