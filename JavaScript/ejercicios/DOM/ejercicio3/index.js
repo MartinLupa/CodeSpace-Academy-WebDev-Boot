@@ -4,6 +4,9 @@
 • Salario: un número aleatorio entre 1250 y 4000.
 */
 
+//Add contract date between today and 2 years ago.
+// contractDate: new Date(+new Date() - Math.random() * ((1000*60*60*24*365*2)))
+
 class Employee {
   constructor(id, position, performance, salary) {
     this.id = id;
@@ -30,7 +33,7 @@ let database = [];
 
 function createEmployees(qty) {
   for (let i = 1; i <= qty; i++) {
-    let randomSalary = 800 + Math.floor(Math.random() * 3500);
+    let randomSalary = 500 + Math.floor(Math.random() * 3500);
     let randomPosition = [
       'Manager',
       'Administrative',
@@ -53,7 +56,7 @@ function createEmployees(qty) {
 }
 
 createEmployees(5);
-console.log('WITHOUT INCREASE', database);
+//console.log('WITHOUT INCREASE', database);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //2. Ordenar el array por rendimiento e imprimirlo. Usar una función anónima como callback.
@@ -78,7 +81,7 @@ let rankingId = _performanceRanking.map((employee) => employee.id);
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //3. Ordenar el array por salario e imprimirlo. Usar una función de flecha.
 const salaryRanking = (a, b) => {
-  if (a.salary < b.performance) {
+  if (a.salary < b.salary) {
     return 1;
   }
   if (a.salary > b.salary) {
@@ -89,6 +92,12 @@ const salaryRanking = (a, b) => {
 
 let _salaryRanking = Array.from(database.sort(salaryRanking));
 let salaryRankingID = _salaryRanking.map((employee) => employee.id);
+
+//WAY SIMPLIER:
+// let sorted = database.sort((a, b) => {
+//   return a.salary - b.salary;
+// });
+// console.log(sorted);
 //let salaryAmount = _salaryRanking.map((employee) => employee.salary);
 //console.log('Salary rankingby ID: ', salaryRankingID);
 
@@ -109,6 +118,17 @@ database.forEach((employee) => {
   if (employee.salary < 1500) {
     let increase = 1.25;
     employee.salary = employee.salary * increase;
-    console.log('WITH INCREASE', database);
+    //console.log('WITH INCREASE', database);
   }
 });
+
+//Filtrar todos los elementos con sueldo mayor a 700 y que se eliminen del array
+
+let newDB = database.slice(
+  element.indexOf(
+    database.filter((element) => {
+      return element.salary > 700;
+    })
+  )
+);
+console.log(newDB);

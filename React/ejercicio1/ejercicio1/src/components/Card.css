@@ -1,0 +1,44 @@
+.card-frame {
+  text-align: center;
+  border: 1px solid rgb(214, 214, 214);
+  width: 286px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  width: 286px;
+  height: 180px;
+}
+
+.card-text {
+  text-align: left;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+}
+
+.counter {
+  margin-left: 10px;
+  padding: 8px 15px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+.card-btn {
+  padding: 10px;
+  background-color: rgb(230, 87, 87);
+  border: none;
+  border-radius: 3px;
+}
+
+.card-btn:hover {
+  background-color: rgb(119, 71, 71);
+}
+
+.btn-link {
+  text-decoration: none;
+  color: white;
+}
