@@ -1,7 +1,8 @@
-import Lista from './Lista';
+import List from './List';
 
-export default function Tienda() {
-  const tienda = {
+export default function Shop() {
+  //state = {};
+  const shop = {
     electronics: [
       {
         id: 27,
@@ -69,9 +70,35 @@ export default function Tienda() {
 
   return (
     <div>
-      <Lista category={tienda.electronics[0].id} />
-      <Lista category={tienda.groceries[0].id} />
-      <Lista category={tienda.pets[0].id} />
+      <List
+        category={Object.keys(shop)[0]}
+        product={shop.groceries[0].product}
+        brand={shop.groceries[0].brand}
+        price={shop.groceries[0].price}
+      />
+      <List
+        category={Object.keys(shop)[1]}
+        product={shop.groceries[0].product}
+        brand={shop.groceries[0].brand}
+        price={shop.groceries[0].price}
+      />
+      <List
+        category={Object.keys(shop)[2]}
+        product={shop.pets[0].product}
+        brand={shop.pets[0].brand}
+        price={shop.pets[0].price}
+      />
+
+      {/* {Object.keys(shop).map((category, i) => {
+        return (
+          <List
+            category={category}
+            product={[i].product}
+            brand={[i].brand}
+            price={[i].price}
+          />
+        );
+      })} */}
     </div>
   );
 }
