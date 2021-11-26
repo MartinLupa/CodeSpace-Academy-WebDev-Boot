@@ -16,6 +16,7 @@
   text-align: left;
 }
 
+<<<<<<< HEAD
 .card-footer {
   display: flex;
   align-items: center;
@@ -27,6 +28,8 @@
   border: 1px solid black;
   border-radius: 3px;
 }
+=======
+>>>>>>> 44d0fe80134f2e8ceeb3ea441320a31ce6c5e438
 .card-btn {
   padding: 10px;
   background-color: rgb(230, 87, 87);
