@@ -1,0 +1,30 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  border: 1px solid #ccc;
+}
+
+input[type='text'],
+input[type='email'] {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-control {
+  border: none !important;
+}
+
+.btn {
+  margin: 10px;
+}
+.error {
+  color: red;
+}
