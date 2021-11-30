@@ -1,0 +1,20 @@
+body {
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+form {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid rgb(214, 209, 209);
+}
+
+h2 {
+  text-align: center;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 10px;
+}

@@ -35,11 +35,11 @@ function createEmployees(qty) {
   for (let i = 1; i <= qty; i++) {
     let randomSalary = 500 + Math.floor(Math.random() * 3500);
     let randomPosition = [
-      'Manager',
-      'Administrative',
-      'Accounting',
-      'Finances',
-      'Engineer',
+      "Manager",
+      "Administrative",
+      "Accounting",
+      "Finances",
+      "Engineer",
     ];
     let randomIndex = Math.floor(Math.random() * randomPosition.length);
     let randomPerformance = Math.floor(Math.random() * 10 + 1);
@@ -58,7 +58,6 @@ function createEmployees(qty) {
 createEmployees(5);
 //console.log('WITHOUT INCREASE', database);
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //2. Ordenar el array por rendimiento e imprimirlo. Usar una función anónima como callback.
 //Accesing employee performance: database.database[i].performance
 
@@ -78,7 +77,6 @@ let _performanceRanking = Array.from(database.sort(performanceRanking));
 let rankingId = _performanceRanking.map((employee) => employee.id);
 //console.log('Best performing employees by ID', rankingId);
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //3. Ordenar el array por salario e imprimirlo. Usar una función de flecha.
 const salaryRanking = (a, b) => {
   if (a.salary < b.salary) {
@@ -101,10 +99,8 @@ let salaryRankingID = _salaryRanking.map((employee) => employee.id);
 //let salaryAmount = _salaryRanking.map((employee) => employee.salary);
 //console.log('Salary rankingby ID: ', salaryRankingID);
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //4. Ordenar el array por el número de empleado de forma decreciente. El número de empleado sólo estará dentro del string Cargo. Usar una función nombrada como callback.
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //5. Usando filter: imprimir el cargo y salario de los que cobren más de 2500€.
 let salaryHigher2500 = database.filter((employee) => employee.salary >= 2500);
 //console.log('Employees with salary of $2500 or higher: ');
@@ -112,7 +108,6 @@ let salaryHigher2500 = database.filter((employee) => employee.salary >= 2500);
 //   console.log(`id: ${employee.id},`, `salary: $${employee.salary}`);
 // });
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //6. Usando forEach: subir el sueldo un 25% a los que cobren menos de 1500€.
 database.forEach((employee) => {
   if (employee.salary < 1500) {
