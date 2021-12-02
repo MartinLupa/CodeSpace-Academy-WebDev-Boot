@@ -13,14 +13,14 @@ function App() {
     setContacts((contacts) => contacts.splice(e.target.id, 1));
   };
 
-  console.log(contacts[0]);
+  //console.log(contacts[0]);
   return (
     <>
       <Form setContacts={setContacts} />
 
       {/* Mapping through contacts data */}
       {contacts.map((contact, index) => (
-        <div className="contacts-display container card p-3 m-3">
+        <div key={index} className="contacts-display container card p-3 m-3">
           <h4>Contact {index + 1}</h4>
           <hr />
           <ContactCard

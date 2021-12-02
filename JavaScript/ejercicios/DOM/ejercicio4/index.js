@@ -36,13 +36,13 @@ class Book {
   }
 }
 
-const tableContainer = window.document.querySelector("#container");
-const buttonAdd = window.document.querySelector("#btnAdd");
-const titleInput = window.document.querySelector("#title");
-const authorInput = window.document.querySelector("#author");
-const salesInput = window.document.querySelector("#sales");
-const priceInput = window.document.querySelector("#price");
-const filterInput = window.document.querySelector("#search");
+const tableContainer = window.document.querySelector('#container');
+const buttonAdd = window.document.querySelector('#btnAdd');
+const titleInput = window.document.querySelector('#title');
+const authorInput = window.document.querySelector('#author');
+const salesInput = window.document.querySelector('#sales');
+const priceInput = window.document.querySelector('#price');
+const filterInput = window.document.querySelector('#search');
 
 let counter = 1;
 
@@ -50,25 +50,25 @@ let bookDB = [];
 let filteredBookDB = [];
 
 const book1 = new Book(
-  "El señor de los anillos",
-  "J. R. Tolkien",
+  'El señor de los anillos',
+  'J. R. Tolkien',
   103000000,
   12
 );
-const book2 = new Book("El alquimista", "Paulo Coelho", 400000000, 16);
-const book3 = new Book("Harry Potter", "J. K. Rowling", 65000000, 11.5);
+const book2 = new Book('El alquimista', 'Paulo Coelho', 400000000, 16);
+const book3 = new Book('Harry Potter', 'J. K. Rowling', 65000000, 11.5);
 
 bookDB.push(book1, book2, book3);
 
 window.onload = function () {
-  filterInput.addEventListener("keyup", (e) => {
+  filterInput.addEventListener('keyup', (e) => {
     let searchValue = e.target.value;
     filteredBookDB = bookDB.filter(
       (book) => book.getTitle().indexOf(searchValue) != -1
     );
     updateTable();
   });
-  buttonAdd.addEventListener("click", () => {
+  buttonAdd.addEventListener('click', () => {
     bookDB.push(
       new Book(
         titleInput.value,
@@ -84,14 +84,15 @@ window.onload = function () {
 };
 
 function clearForm() {
-  titleInput.value = "";
-  authorInput.value = "";
+  titleInput.value = '';
+  authorInput.value = '';
   salesInput.value = 0;
   priceInput.value = 0;
 }
 
 function updateTable() {
-  let html = "";
+  let html = '';
+
   filteredBookDB.forEach((book) => {
     html += `<tr>
         <th scope="row">${book.getId()}</th>
