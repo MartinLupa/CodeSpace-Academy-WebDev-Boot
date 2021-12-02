@@ -1,24 +1,26 @@
-// Function Sequence
-// JavaScript functions are executed in the sequence they are called. Not in the sequence they are defined.
-// Sequence Control
-// Sometimes you would like to have better control over when to execute a function.
+//Callback example of a bicycle electronic derraulier.
+//Objective: to always maintain the most efficient gear.
+//Given a currentGear, if rpm of the pedaling cyclist is <= 80 or >=120, the derraulier will wait 3 seconds for the cyclist to change it manually,
+//or it will automatically modify it.
 
-//Esto es una simulación de una llamada a una API.
-let data;
-setTimeout(function () {
-  data = 'ESTA ES LA RESPUESTA DE LA API';
-}, 3000);
+let rpm = 80;
+let currentGear = 2;
 
-//-----------------------------------------------------
-//Esta función intenta imprimir la data sin esperar la resolución de la API.
-function getDataDirectly() {
-  console.log('Data sin esperar a la API: ', data);
-}
-getDataDirectly();
+const changeGear = () => {
+  if (rpm >= 120) {
+    currentGear++;
+  } else if (rpm <= 80) {
+    currentGear--;
+  }
+};
 
-//-----------------------------------------------------
-//Esta función espera:
-function getDataThroughCallback() {
-  console.log('Data esperando a la API: ', data);
-}
-setTimeout(getDataThroughCallback, 3100);
+const cadencySensor = (rpm, changeGear) => {
+  console.log("RPM outside efficient values, please change gear.");
+  console.log("Current gear: ", currentGear);
+  setTimeout(() => {
+    changeGear(rpm);
+    console.log("Gear changed to: ", currentGear);
+  }, 3000);
+};
+
+cadencySensor(rpm, changeGear);
