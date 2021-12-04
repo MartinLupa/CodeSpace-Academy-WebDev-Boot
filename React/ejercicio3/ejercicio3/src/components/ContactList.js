@@ -1,7 +1,11 @@
 export default function ContactList({ contacts, setContacts }) {
-  const handleDelete = (e) => {
-    console.log(e.target.id);
-    setContacts((contact) => contacts.filter(contact.id !== e.target.id));
+  //-----------------------------
+  //Clase React N° 5 hora 00:25:00 - Explicación removeContact
+  //-----------------------------
+  const removeContact = (phone) => {
+    return () => {
+      setContacts(contacts.filter((contact) => contact.phone !== phone));
+    };
   };
   return (
     <div className="card-container row flex-wrap m-2">
@@ -23,7 +27,10 @@ export default function ContactList({ contacts, setContacts }) {
               {contact.postalCode}
             </li>
           </ul>
-          <button onClick={handleDelete} id={index} className="btn btn-danger">
+          <button
+            onClick={removeContact(contact.phone)}
+            className="btn btn-danger"
+          >
             Delete
           </button>
         </div>

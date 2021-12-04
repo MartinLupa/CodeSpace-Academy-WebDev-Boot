@@ -65,16 +65,7 @@ export default function NewContactForm({ setContacts }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newContact = {
-      name: form.name,
-      lastnames: form.lastnames,
-      address: form.address,
-      city: form.city,
-      postalCode: form.postalCode,
-      phone: form.phone,
-    };
-
-    setContacts((currentContacts) => [...currentContacts, newContact]);
+    setContacts((currentContacts) => [...currentContacts, form]);
     setForm(initialState);
   };
   return (
