@@ -1,4 +1,8 @@
-export default function ContactList({ contacts }) {
+export default function ContactList({ contacts, setContacts }) {
+  const handleDelete = (e) => {
+    console.log(e.target.id);
+    setContacts((contact) => contacts.filter(contact.id !== e.target.id));
+  };
   return (
     <div className="card-container row flex-wrap m-2">
       {contacts.map((contact, index) => (
@@ -19,7 +23,7 @@ export default function ContactList({ contacts }) {
               {contact.postalCode}
             </li>
           </ul>
-          <button id={index} className="btn btn-danger">
+          <button onClick={handleDelete} id={index} className="btn btn-danger">
             Delete
           </button>
         </div>

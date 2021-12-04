@@ -1,39 +1,81 @@
 import { useState } from 'react';
 //import { useFormik } from 'formik';
 
-// ----------------------------- FORM USING JUST REACT -----------------------------
-
 export default function NewContactForm({ setContacts }) {
-  const [name, setName] = useState('');
-  const [lastnames, setLastnames] = useState('');
-  const [address, setAddress] = useState('');
-  const [city, setCity] = useState('');
-  const [postalCode, setPostalCode] = useState(0);
-  const [phone, setPhone] = useState('');
+  // ----------------------------- OPTION 1 -----------------------------
+  // const [name, setName] = useState('');
+  // const [lastnames, setLastnames] = useState('');
+  // const [address, setAddress] = useState('');
+  // const [city, setCity] = useState('');
+  // const [postalCode, setPostalCode] = useState(0);
+  // const [phone, setPhone] = useState('');
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
+  // const handleNameChange = (e) => {
+  //   setName(e.target.value);
+  // };
+  // const handleLastNamesChange = (e) => {
+  //   setLastnames(e.target.value);
+  // };
+  // const handleAddressChange = (e) => {
+  //   setAddress(e.target.value);
+  // };
+  // const handleCityChange = (e) => {
+  //   setCity(e.target.value);
+  // };
+  // const handlePCChange = (e) => {
+  //   setPostalCode(e.target.value);
+  // };
+  // const handlePhoneChange = (e) => {
+  //   setPhone(e.target.value);
+  // };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const newContact = { name, lastnames, address, city, postalCode, phone };
+  //   setContacts((currentContacts) => [...currentContacts, newContact]);
+
+  //   setName("")
+  //   setLastnames("")
+  //   setAddress("")
+  //   setCity("")
+  //   setPostalCode("")
+  //   setPhone("")
+  // };
+
+  // ----------------------------- OPTION 2 -----------------------------
+  const initialState = {
+    name: '',
+    lastnames: '',
+    address: '',
+    city: '',
+    postalCode: '',
+    phone: '',
   };
-  const handleLastNamesChange = (e) => {
-    setLastnames(e.target.value);
-  };
-  const handleAddressChange = (e) => {
-    setAddress(e.target.value);
-  };
-  const handleCityChange = (e) => {
-    setCity(e.target.value);
-  };
-  const handlePCChange = (e) => {
-    setPostalCode(e.target.value);
-  };
-  const handlePhoneChange = (e) => {
-    setPhone(e.target.value);
+  const [form, setForm] = useState(initialState);
+
+  //-----------------------------
+  //Clase React N° 4 hora 3:00:00 - Explicación handleInput
+  //-----------------------------
+  const handleInput = (e) => {
+    //console.log(e.target.name);
+    const inputName = e.target.id;
+    const newValue = e.target.value;
+    setForm({ ...form, ...{ [inputName]: newValue } });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newContact = { name, lastnames, address, city, postalCode, phone };
+    const newContact = {
+      name: form.name,
+      lastnames: form.lastnames,
+      address: form.address,
+      city: form.city,
+      postalCode: form.postalCode,
+      phone: form.phone,
+    };
+
     setContacts((currentContacts) => [...currentContacts, newContact]);
+    setForm(initialState);
   };
   return (
     <form
@@ -43,29 +85,44 @@ export default function NewContactForm({ setContacts }) {
     >
       <h2>Add contact</h2>
       <label htmlFor="">Name</label>
-      <input type="text" onChange={handleNameChange} />
-
+      <input type="text" id="name" value={form.name} onChange={handleInput} />
       <label htmlFor="">Lastnames</label>
-      <input type="text" onChange={handleLastNamesChange} />
-
+      <input
+        type="text"
+        id="lastnames"
+        value={form.lastnames}
+        onChange={handleInput}
+      />
       <label htmlFor="">Address</label>
-      <input type="text" onChange={handleAddressChange} />
-
+      <input
+        type="text"
+        id="address"
+        value={form.address}
+        onChange={handleInput}
+      />
       <label htmlFor="">City</label>
-      <input type="text" onChange={handleCityChange} />
-
+      <input type="text" name="city" value={form.city} onChange={handleInput} />
       <label htmlFor="">Postal Code</label>
-      <input type="number" onChange={handlePCChange} />
-
+      <input
+        type="number"
+        id="postalCode"
+        value={form.postalCode}
+        onChange={handleInput}
+      />
       <label htmlFor="">Phone</label>
-      <input type="number" onChange={handlePhoneChange} />
-
+      <input
+        type="number"
+        id="phone"
+        value={form.phone}
+        onChange={handleInput}
+      />
       <button className="btn btn-success mt-3">Add contact</button>
     </form>
   );
 }
 
-// ----------------------------- FORM USING FORMIK -----------------------------
+// ----------------------------- OPTION 3 - FORMIK -----------------------------
+// This option includes basic validation
 
 // const initialValues = {
 //   name: '',

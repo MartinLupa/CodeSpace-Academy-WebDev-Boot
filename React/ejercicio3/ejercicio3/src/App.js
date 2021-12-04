@@ -18,7 +18,11 @@ function App() {
     <div className="main-container">
       <NewContactForm setContacts={setContacts} />
       {/* Mapping through contacts data */}
-      <ContactList className="contact__card" contacts={contacts} />
+      <ContactList
+        className="contact__card"
+        setContacts={setContacts}
+        contacts={contacts}
+      />
     </div>
   );
 }
