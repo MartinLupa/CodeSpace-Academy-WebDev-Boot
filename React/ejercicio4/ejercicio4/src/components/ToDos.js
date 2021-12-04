@@ -1,10 +1,7 @@
-import { useEffect, useState } from 'react';
-import Input from './components/Input';
 //Custom hook
-import { useFetch } from './hooks/useFetch';
+import { useFetch } from '../hooks/useFetch';
 
-export default function ToDos() {
-  const [todos, setTodos] = useState([]);
+export default function ToDos({ todos, setTodos }) {
   const API_TODOS = 'https://jsonplaceholder.typicode.com/todos';
 
   const handleDelete = (title) => {
@@ -32,8 +29,6 @@ export default function ToDos() {
 
   return (
     <>
-      <h1>Todo List</h1>
-      <Input setTodos={setTodos} />
       <ul className="list-group ">
         {todos.map(({ title, completed }, index) => {
           return (
