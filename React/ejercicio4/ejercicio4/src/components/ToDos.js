@@ -1,7 +1,11 @@
+import { useContext } from 'react';
+import { GlobalContext } from '../App';
 //Custom hook
 import { useFetch } from '../hooks/useFetch';
 
-export default function ToDos({ todos, setTodos }) {
+export default function ToDos() {
+  const { todos, setTodos } = useContext(GlobalContext);
+
   const API_TODOS = 'https://jsonplaceholder.typicode.com/todos';
 
   const handleDelete = (title) => {

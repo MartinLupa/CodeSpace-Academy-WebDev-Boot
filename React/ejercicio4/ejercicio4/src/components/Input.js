@@ -1,6 +1,9 @@
+import { useContext } from 'react';
+import { GlobalContext } from '../App';
 import { useState } from 'react';
 
-export default function Input({ setTodos }) {
+export default function Input() {
+  const { setTodos } = useContext(GlobalContext);
   const [newTodo, setNewTodo] = useState('');
 
   const handleInputChange = (e) => {

@@ -10,7 +10,7 @@ export default function App() {
   return (
     <>
       <h1>Todo List</h1>
-      <GlobalContext.Provider setTodos={setTodos} todos={todos}>
+      <GlobalContext.Provider value={{ todos, setTodos }}>
         <Input />
         <ToDos />
       </GlobalContext.Provider>
