@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Input from './components/Input';
+//Custom hook
+import { useFetch } from './hooks/useFetch';
 
 export default function ToDos() {
   const [todos, setTodos] = useState([]);
@@ -20,11 +22,13 @@ export default function ToDos() {
     }
   };
 
-  useEffect(() => {
-    fetch(API_TODOS)
-      .then((response) => response.json())
-      .then((data) => setTodos(data.slice(0, 5)));
-  }, []);
+  //Custom hook
+  useFetch(API_TODOS, setTodos);
+  // useEffect(() => {
+  //   fetch(API_TODOS)
+  //     .then((response) => response.json())
+  //     .then((data) => setTodos(data.slice(0, 5)));
+  // }, []);
 
   return (
     <>
