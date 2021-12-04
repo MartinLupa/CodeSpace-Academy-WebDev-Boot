@@ -3,9 +3,7 @@ export default function ContactList({ contacts, setContacts }) {
   //Clase React N° 5 hora 00:25:00 - Explicación removeContact
   //-----------------------------
   const removeContact = (phone) => {
-    return () => {
-      setContacts(contacts.filter((contact) => contact.phone !== phone));
-    };
+    setContacts(contacts.filter((contact) => contact.phone !== phone));
   };
   return (
     <div className="card-container row flex-wrap m-2">
@@ -28,7 +26,7 @@ export default function ContactList({ contacts, setContacts }) {
             </li>
           </ul>
           <button
-            onClick={removeContact(contact.phone)}
+            onClick={() => removeContact(contact.phone)}
             className="btn btn-danger"
           >
             Delete

@@ -75,38 +75,18 @@ export default function NewContactForm({ setContacts }) {
       action=""
     >
       <h2>Add contact</h2>
-      <label htmlFor="">Name</label>
-      <input type="text" id="name" value={form.name} onChange={handleInput} />
-      <label htmlFor="">Lastnames</label>
-      <input
-        type="text"
-        id="lastnames"
-        value={form.lastnames}
-        onChange={handleInput}
-      />
-      <label htmlFor="">Address</label>
-      <input
-        type="text"
-        id="address"
-        value={form.address}
-        onChange={handleInput}
-      />
-      <label htmlFor="">City</label>
-      <input type="text" name="city" value={form.city} onChange={handleInput} />
-      <label htmlFor="">Postal Code</label>
-      <input
-        type="number"
-        id="postalCode"
-        value={form.postalCode}
-        onChange={handleInput}
-      />
-      <label htmlFor="">Phone</label>
-      <input
-        type="number"
-        id="phone"
-        value={form.phone}
-        onChange={handleInput}
-      />
+      <label htmlFor="name">Name</label>
+      <input type="text" id="name" onChange={handleInput} />
+      <label htmlFor="lastnames">Lastnames</label>
+      <input type="text" id="lastnames" onChange={handleInput} />
+      <label htmlFor="address">Address</label>
+      <input type="text" id="address" onChange={handleInput} />
+      <label htmlFor="city">City</label>
+      <input type="text" id="city" name="city" onChange={handleInput} />
+      <label htmlFor="postalCode">Postal Code</label>
+      <input type="number" id="postalCode" onChange={handleInput} />
+      <label htmlFor="phone">Phone</label>
+      <input type="number" id="phone" onChange={handleInput} />
       <button className="btn btn-success mt-3">Add contact</button>
     </form>
   );
