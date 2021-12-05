@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './Card.css';
 
 export default function Card(props) {
   const [count, setCount] = useState(0);

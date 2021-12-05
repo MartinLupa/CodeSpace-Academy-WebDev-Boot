@@ -1,3 +1,13 @@
+body {
+  width: 100%;
+}
+.main-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .card-frame {
   text-align: center;
   border: 1px solid rgb(214, 214, 214);

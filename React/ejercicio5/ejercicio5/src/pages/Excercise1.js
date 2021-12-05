@@ -1,9 +1,9 @@
-import './App.css';
-import Card from './components/Card';
-import data from './data/data';
+import './Excercise1.css';
+import Card from '../components/Card';
+import data from '../data/data';
 
 const products = data;
-function App() {
+export default function Excercise1() {
   return (
     <div className="main-container">
       {products.map((product) => {
@@ -20,5 +20,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

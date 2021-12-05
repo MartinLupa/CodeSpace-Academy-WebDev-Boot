@@ -1,4 +1,3 @@
-import './App.css';
 import Shop from './components/Shop';
 
 function App() {

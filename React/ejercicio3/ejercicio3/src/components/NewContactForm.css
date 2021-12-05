@@ -1,0 +1,12 @@
+form {
+  max-width: 400px !important;
+}
+
+.card-container {
+  width: 100%;
+}
+
+.card {
+  padding: 10px;
+  max-width: 400px;
+}

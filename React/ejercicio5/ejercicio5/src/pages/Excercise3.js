@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import NewContactForm from './components/NewContactForm';
-import ContactList from './components/ContactList';
-import contactsData from '../src/data/contacts';
+import './Excercise3.css';
+import NewContactForm from '../components/NewContactForm';
+import ContactList from '../components/ContactList';
+import contactsData from '../data/contacts';
 
 //CHECK FORMIK https://formik.org/
 
-function App() {
+export default function Excercise3() {
   const [contacts, setContacts] = useState(contactsData);
 
   // const handleDeleteBtn = (e) => {
@@ -25,5 +26,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

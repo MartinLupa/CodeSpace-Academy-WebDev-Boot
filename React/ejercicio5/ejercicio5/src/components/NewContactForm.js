@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './NewContactForm.css';
 //import { useFormik } from 'formik';
 
 export default function NewContactForm({ setContacts }) {
