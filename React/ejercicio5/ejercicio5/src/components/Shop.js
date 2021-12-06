@@ -3,6 +3,7 @@ import data from '../data/data';
 
 const shop = data;
 
+console.log(shop['electronics']);
 export default function Shop() {
   return (
     <div>

@@ -2,7 +2,7 @@ import Shop from './components/Shop';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Shop />
     </div>
   );

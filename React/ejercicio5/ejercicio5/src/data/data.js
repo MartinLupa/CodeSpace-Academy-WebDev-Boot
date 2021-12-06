@@ -1,33 +1,67 @@
-const products = [
-  {
-    url: 'https://storage.googleapis.com/argon18craft/products/2021/Electron-Pro-Pursuit/frameset-pursuit-side-02.jpg',
-    title: 'Electron Pro TKO Pursuit',
-    cardText:
-      'With revolutionary aerodynamics, massive stiffness, and precision positioning through a remodeled cockpit, the Electron Pro TKO Pursuit delivers knockout power to the track’s strongest riders.',
-    infoHref: 'https://www.argon18.com/en/bikes/track',
-  },
-  {
-    url: 'https://storage.googleapis.com/argon18craft/products/2021/_homeFeaturedProducts/Electron-Pro-Track-Cycling-Bike-Argon-18.jpg',
-    title: 'Electron Pro Rio Pursuit',
-    cardText:
-      "Engineered for the world's fastest riders, the Electron Pro Pursuit lives for maximum intensity - with minimum drag - offering the perfect balance of aero precision and exceptional power transfer.",
-    infoHref: 'https://www.argon18.com/en/bikes/track',
-  },
-  {
-    url: 'https://storage.googleapis.com/argon18craft/products/2021/_homeFeaturedProducts/A18_Electron-Pro_SIDE_Sprint_01.jpg',
-    title: 'Electron Pro RIO Sprint',
-    cardText:
-      "Engineered for the world's most powerful riders, the Electron Pro Sprint combines maximum rigidity - with minimum drag - offering the perfect balance of aero precision and added stiffness for ultimate power transfer.",
-    infoHref: 'https://www.argon18.com/en/bikes/track',
-  },
-  {
-    url: 'https://storage.googleapis.com/argon18craft/products/electron-my2020-side.jpg',
-    title: 'Electron',
-    cardText:
-      'Unique, sleek and aerodynamic, the Electron combines velodrome performance and street style in one lean and mean machine.',
-    infoHref: 'https://www.argon18.com/en/bikes/track',
-  },
-];
-const data = products;
+const data = {
+  electronics: [
+    {
+      id: 27,
+      product: "TV",
+      brand: "LG",
+      model: "XP7302",
+      price: 399,
+    },
+    {
+      id: 28,
+      product: "Hi-Fi Speakers",
+      brand: "Samsung",
+      model: "VF235",
+      price: 179,
+    },
+    {
+      id: 29,
+      product: "TV",
+      brand: "Sony",
+      model: "Bravia-173",
+      price: 498,
+    },
+  ],
+  groceries: [
+    {
+      id: 30,
+      product: "Cookies",
+      brand: "Maria",
+      price: 0.9,
+    },
+    {
+      id: 31,
+      product: "Salad",
+      brand: "Imizurra",
+      price: 1.3,
+    },
+    {
+      id: 32,
+      product: "Potatoes",
+      brand: "McKain",
+      price: 0.8,
+    },
+    {
+      id: 33,
+      product: "Pasta",
+      brand: "Tutti",
+      price: 1.1,
+    },
+  ],
+  pets: [
+    {
+      id: 34,
+      product: "Cat canned food",
+      brand: "Purina",
+      price: 4.9,
+    },
+    {
+      id: 35,
+      product: "Cat sand soil",
+      brand: "Limpior",
+      price: 1.1,
+    },
+  ],
+};
 
 export default data;

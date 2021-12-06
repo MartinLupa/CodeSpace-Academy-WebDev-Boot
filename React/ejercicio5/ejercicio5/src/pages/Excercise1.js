@@ -1,8 +1,8 @@
 import './Excercise1.css';
 import Card from '../components/Card';
-import data from '../data/data';
+import bikeData from '../data/bikeData';
 
-const products = data;
+const products = bikeData;
 export default function Excercise1() {
   return (
     <div className="main-container">
