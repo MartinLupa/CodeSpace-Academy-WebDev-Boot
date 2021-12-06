@@ -1,0 +1,23 @@
+footer {
+  color: #e5e5e5;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-icons-container i {
+  margin: 20px;
+}
+
+.fa-envelope-square:hover {
+  color: #b2f061;
+}
+
+.fa-linkedin:hover {
+  color: #007785;
+}
+
+.fa-github:hover {
+  color: #8d8a8a;
+}
+/*# sourceMappingURL=Footer.css.map */

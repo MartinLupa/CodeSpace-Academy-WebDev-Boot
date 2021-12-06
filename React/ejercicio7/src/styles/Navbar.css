@@ -1,0 +1,28 @@
+.navbar {
+  padding: 12px;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  color: #e50914;
+  height: 120px;
+}
+
+.navbar a {
+  color: #e5e5e5;
+  margin-left: 20px;
+}
+
+.navbar a:hover {
+  color: #e50914;
+}
+
+.navbar label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+/*# sourceMappingURL=Navbar.css.map */

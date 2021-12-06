@@ -1,0 +1,10 @@
+.card {
+  background-color: #141414;
+  width: 430px;
+  margin-bottom: 20px;
+  border: 1px solid #1b1b1b;
+  -webkit-box-shadow: 0 -2px 10px black;
+          box-shadow: 0 -2px 10px black;
+  padding: 10px;
+}
+/*# sourceMappingURL=Card.css.map */

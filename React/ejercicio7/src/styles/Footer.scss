@@ -1,0 +1,25 @@
+@import './variables/Variables.scss';
+
+footer {
+  color: $main-text-color;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-icons-container i {
+  margin: 20px;
+}
+
+.fa-envelope-square:hover {
+  color: rgb(178, 240, 97);
+}
+
+.fa-linkedin:hover {
+  color: #007785;
+}
+
+.fa-github:hover {
+  color: rgb(141, 138, 138);
+}

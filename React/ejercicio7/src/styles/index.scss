@@ -1,0 +1,19 @@
+@import './variables/Variables.scss';
+
+body {
+  background-color: $main-background-color;
+  color: $main-text-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+a {
+  color: $main-text-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $main-text-color;
+}
