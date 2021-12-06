@@ -1,0 +1,15 @@
+.main-container-3 {
+  display: flex;
+}
+
+.contact-form {
+  max-width: 400px !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-card {
+  display: flex;
+  max-width: 450px !important;
+  padding: 20px;
+}
