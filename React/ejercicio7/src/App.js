@@ -1,14 +1,27 @@
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import Details from './pages/Details';
-// import Main from './pages/Main';
+import Router from './Router';
+import { useState, createContext } from 'react';
+
+export const GlobalContext = createContext();
 
 function App() {
+  const [movies, setMovies] = useState([]);
+  const [movieID, setMovieID] = useState();
+  const [watchList, setWatchList] = useState();
+
   return (
     <div>
-      <Navbar />
-      <Details />
-      <Footer />
+      <GlobalContext.Provider
+        value={{
+          movies,
+          setMovies,
+          movieID,
+          setMovieID,
+          watchList,
+          setWatchList,
+        }}
+      >
+        <Router />
+      </GlobalContext.Provider>
     </div>
   );
 }

@@ -25,6 +25,11 @@
   width: 150px;
 }
 
+.details-btn {
+  display: flex;
+  margin: auto;
+}
+
 @media only screen and (max-width: 1020px) {
   .details-container {
     flex-direction: column;
