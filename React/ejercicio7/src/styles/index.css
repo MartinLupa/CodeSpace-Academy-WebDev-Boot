@@ -22,4 +22,8 @@ a {
 a:hover {
   color: #e5e5e5;
 }
+
+.active {
+  color: #e5e5e5 !important;
+}
 /*# sourceMappingURL=index.css.map */

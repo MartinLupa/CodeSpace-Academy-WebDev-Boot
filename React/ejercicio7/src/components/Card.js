@@ -22,8 +22,8 @@ export default function Card({ url, title, overview, release, id }) {
     const toWatchMovieID = e.target.id;
     console.log('toWatchMovieID ', toWatchMovieID);
     console.log(movies);
-    const movieToAdd = movies.filter((movie) => movie.id === toWatchMovieID);
-    console.log(movieToAdd);
+    const movieToAdd = movies.filter((movie) => movie.id == toWatchMovieID);
+    setWatchList((currentMovies) => [...currentMovies, movieToAdd]);
 
     // setWatchList(movieToAdd);
   };

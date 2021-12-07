@@ -6,7 +6,7 @@ export const GlobalContext = createContext();
 function App() {
   const [movies, setMovies] = useState([]);
   const [movieID, setMovieID] = useState();
-  const [watchList, setWatchList] = useState();
+  const [watchList, setWatchList] = useState([]);
 
   return (
     <div>

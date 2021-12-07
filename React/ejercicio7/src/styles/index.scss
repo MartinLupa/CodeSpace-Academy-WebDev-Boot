@@ -17,3 +17,7 @@ a {
 a:hover {
   color: $main-text-color;
 }
+
+.active {
+  color: $main-text-color !important;
+}

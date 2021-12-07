@@ -13,7 +13,7 @@ export default function Main() {
     )
       .then((response) => response.json())
       .then((data) => setMovies(data.results));
-  });
+  }, []);
 
   return (
     <div className="card-container">
