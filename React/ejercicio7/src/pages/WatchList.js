@@ -7,20 +7,16 @@ export default function WatchList() {
   const { watchList } = useContext(GlobalContext);
   return (
     <div className="card-container">
-      {watchList == [] ? (
-        <h2>Your watch list is empty, add a movie to watch..</h2>
-      ) : (
-        watchList?.map((movie) => (
-          <Card
-            key={movie?.id}
-            url={movie?.poster_path}
-            title={movie?.original_title}
-            overview={movie?.overview}
-            release={movie?.release_date}
-            id={movie?.id}
-          />
-        ))
-      )}
+      {watchList.map((movie) => (
+        <Card
+          key={movie?.id}
+          url={movie?.poster_path}
+          title={movie?.original_title}
+          overview={movie?.overview}
+          release={movie?.release_date}
+          id={movie?.id}
+        />
+      ))}
     </div>
   );
 }

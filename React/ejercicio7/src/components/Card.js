@@ -4,7 +4,7 @@ import { GlobalContext } from '../App';
 import '../styles/Card.css';
 
 export default function Card({ url, title, overview, release, id }) {
-  const { movieID, setMovieID, setWatchList, movies } =
+  const { movieID, setMovieID, movies, setWatchList } =
     useContext(GlobalContext);
 
   const navigate = useNavigate();
@@ -20,17 +20,12 @@ export default function Card({ url, title, overview, release, id }) {
 
   const handleAddWatchList = (e) => {
     const toWatchMovieID = e.target.id;
-    console.log('toWatchMovieID ', toWatchMovieID);
-    console.log(movies);
     const movieToAdd = movies.filter((movie) => movie.id == toWatchMovieID);
-    setWatchList((currentMovies) => [...currentMovies, movieToAdd]);
-
-    // setWatchList(movieToAdd);
+    setWatchList(movieToAdd);
   };
 
   const addClickSubmit = (e) => {
     e.preventDefault();
-    // setWatchList(movieToAdd);
   };
 
   return (
