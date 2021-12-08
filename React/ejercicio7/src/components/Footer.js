@@ -5,7 +5,7 @@ export default function Footer() {
   const year = date.getFullYear();
 
   return (
-    <footer>
+    <footer className="">
       Martín Lupa {year}
       <div className="footer-icons-container">
         <a href="https://www.linkedin.com/in/martin-lupa/">

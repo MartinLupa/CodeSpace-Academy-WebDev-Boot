@@ -13,20 +13,23 @@ export default function Main() {
     )
       .then((response) => response.json())
       .then((data) => setMovies(data.results));
-  }, []);
+  }, [movies]);
 
   return (
-    <div className="card-container">
-      {movies.map((movie) => (
-        <Card
-          key={movie.id}
-          url={movie.poster_path}
-          title={movie.original_title}
-          overview={movie.overview}
-          release={movie.release_date}
-          id={movie.id}
-        />
-      ))}
+    <div className="main-container">
+      <h2>Popular movies</h2>
+      <div className="card-container">
+        {movies.map((movie) => (
+          <Card
+            key={movie.id}
+            url={movie.poster_path}
+            title={movie.original_title}
+            overview={movie.overview}
+            release={movie.release_date}
+            id={movie.id}
+          />
+        ))}
+      </div>
     </div>
   );
 }

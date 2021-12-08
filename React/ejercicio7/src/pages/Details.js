@@ -3,7 +3,13 @@ import { useState, useEffect, useContext } from 'react';
 import { GlobalContext } from '../App';
 export default function Details() {
   const [movieDetails, setMovieDetails] = useState([]);
-  const { movieID } = useContext(GlobalContext);
+  const { movieID, setWatchList, movies } = useContext(GlobalContext);
+
+  const handleAddWatchList = (e) => {
+    const toWatchMovieID = e.target.id;
+    const movieToAdd = movies.filter((movie) => movie.id == toWatchMovieID);
+    setWatchList((previousWatchlist) => [...previousWatchlist, movieToAdd[0]]);
+  };
 
   //GET Details /movie/{movie_id}
   //https://api.themoviedb.org/3/movie/{movie_id}?api_key=58cbd250a252bc05dbeb601a8cddd6e6&language=en-US
@@ -37,7 +43,11 @@ export default function Details() {
             ></img>
           ))}
         </div>
-        <button className="btn btn-outline-danger details-btn">
+        <button
+          id={movieDetails?.id}
+          onClick={handleAddWatchList}
+          className="btn btn-outline-danger details-btn"
+        >
           Add to Watch List
         </button>
       </div>

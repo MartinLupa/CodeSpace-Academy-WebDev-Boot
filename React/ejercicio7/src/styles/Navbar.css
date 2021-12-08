@@ -1,15 +1,25 @@
+.logo-text {
+  width: 180px;
+  font-size: 1.4rem;
+  margin: 10px;
+}
+
 .navbar {
+  background-color: #141414;
   padding: 12px;
-  -webkit-box-align: center !important;
-      -ms-flex-align: center !important;
-          align-items: center !important;
   color: #e50914;
   height: 120px;
+}
+
+.navbar-collapse {
+  background-color: #141414;
+  width: 100%;
 }
 
 .navbar a {
   color: #e5e5e5;
   margin-left: 20px;
+  margin-bottom: 5px;
 }
 
 .navbar a:hover {
@@ -24,5 +34,12 @@
       -ms-flex-align: center;
           align-items: center;
   margin-right: 10px;
+}
+
+button .navbar-toggler-icon {
+  color: #e5e5e5;
+  padding: 10px;
+  padding-right: 20px;
+  height: 20px;
 }
 /*# sourceMappingURL=Navbar.css.map */

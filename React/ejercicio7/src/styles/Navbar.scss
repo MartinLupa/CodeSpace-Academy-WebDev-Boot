@@ -1,15 +1,26 @@
 @import './variables/Variables.scss';
+.logo-text {
+  width: 180px;
+  font-size: 1.4rem;
+  margin: 10px;
+}
 
 .navbar {
+  background-color: $main-background-color;
   padding: 12px;
-  align-items: center !important;
   color: $logo-color;
   height: 120px;
+}
+
+.navbar-collapse {
+  background-color: $main-background-color;
+  width: 100%;
 }
 
 .navbar a {
   color: $main-text-color;
   margin-left: 20px;
+  margin-bottom: 5px;
 }
 
 .navbar a:hover {
@@ -20,4 +31,11 @@
   display: flex;
   align-items: center;
   margin-right: 10px;
+}
+
+button .navbar-toggler-icon {
+  color: $main-text-color;
+  padding: 10px;
+  padding-right: 20px;
+  height: 20px;
 }

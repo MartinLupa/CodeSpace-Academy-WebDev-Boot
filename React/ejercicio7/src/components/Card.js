@@ -10,7 +10,6 @@ export default function Card({ url, title, overview, release, id }) {
   const navigate = useNavigate();
 
   const handleDetailsClick = (e) => {
-    // console.log(e.target.id);
     setMovieID(e.target.id);
   };
 
@@ -21,7 +20,8 @@ export default function Card({ url, title, overview, release, id }) {
   const handleAddWatchList = (e) => {
     const toWatchMovieID = e.target.id;
     const movieToAdd = movies.filter((movie) => movie.id == toWatchMovieID);
-    setWatchList(movieToAdd);
+    setWatchList((previousWatchlist) => [...previousWatchlist, movieToAdd[0]]);
+    console.log(movieToAdd[0]);
   };
 
   const addClickSubmit = (e) => {
