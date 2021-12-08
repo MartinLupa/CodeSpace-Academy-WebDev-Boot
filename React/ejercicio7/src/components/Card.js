@@ -27,8 +27,8 @@ export default function Card({ url, title, overview, release, id }) {
     e.preventDefault();
   };
 
-  const handleDelete = (e) => {
-    console.log(e.target.id);
+  const handleDelete = (id) => {
+    setWatchList(watchList.filter((movie) => movie.id !== id));
   };
 
   return (
@@ -63,7 +63,7 @@ export default function Card({ url, title, overview, release, id }) {
           </button>
         </form>
         <button
-          onClick={handleDelete}
+          onClick={() => handleDelete(id)}
           id={id}
           className="btn btn-outline-danger card-btn-del"
         >
