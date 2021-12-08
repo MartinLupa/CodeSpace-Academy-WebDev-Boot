@@ -3,9 +3,8 @@ import { GlobalContext } from '../App';
 import { useContext } from 'react';
 import Card from '../components/Card';
 
-export default function WatchList({ deleteBtnState }) {
+export default function WatchList() {
   const { watchList } = useContext(GlobalContext);
-
   return (
     <div className="card-container">
       {watchList.map((movie) => (
@@ -16,7 +15,6 @@ export default function WatchList({ deleteBtnState }) {
           overview={movie?.overview}
           release={movie?.release_date}
           id={movie?.id}
-          false={deleteBtnState}
         />
       ))}
     </div>
