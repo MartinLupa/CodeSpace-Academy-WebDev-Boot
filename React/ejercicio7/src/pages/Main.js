@@ -13,13 +13,13 @@ export default function Main() {
     )
       .then((response) => response.json())
       .then((data) => setMovies(data.results));
-  }, [movies]);
+  });
 
   return (
     <div className="main-container">
       <h2>Popular movies</h2>
       <div className="card-container">
-        {movies.map((movie) => (
+        {movies?.map((movie) => (
           <Card
             key={movie.id}
             url={movie.poster_path}
