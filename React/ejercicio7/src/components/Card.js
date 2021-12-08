@@ -27,6 +27,10 @@ export default function Card({ url, title, overview, release, id }) {
     e.preventDefault();
   };
 
+  const handleDelete = (e) => {
+    console.log(e.target.id);
+  };
+
   return (
     <div className="card">
       <img
@@ -58,6 +62,13 @@ export default function Card({ url, title, overview, release, id }) {
             Add to Watch List
           </button>
         </form>
+        <button
+          onClick={handleDelete}
+          id={id}
+          className="btn btn-outline-danger card-btn-del"
+        >
+          X
+        </button>
       </div>
     </div>
   );
