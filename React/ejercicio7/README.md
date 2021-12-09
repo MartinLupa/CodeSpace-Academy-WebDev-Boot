@@ -1,73 +1,41 @@
-MUI (Material UI)
-SASS
+# Movies World
 
-# Getting Started with Create React App
+Author: Martin I. Lupa Groppelli, December 2021.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Movie search responsive React SPA, with watchlist and search functionalities.
 
-## Available Scripts
+## Repository
 
-In the project directory, you can run:
+https://github.com/MartinLupa/Movies-World-React-SPA
 
-### `npm start`
+## How to use
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Navigate to project folder and run:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+npm install
+npm start
+```
 
-### `npm test`
+## How to build
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm run build
+npx serve-s build
+```
 
-### `npm run build`
+## Project info
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Tested with Node v14.16.1 and npm 6.14.12.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React-based responsive SPA.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Bootstrap.
 
-### `npm run eject`
+Hooks: useState, useEffect, useContext, custom hook (useFetch).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Use of a global context to keep states while navigating between pages (I don´t use any database here).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Router: routing, conditional rendering of components with useLocation (Delete button only rendered on watch list page | Add to playlist button only rendered on the main page).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+.env file to store keys.
