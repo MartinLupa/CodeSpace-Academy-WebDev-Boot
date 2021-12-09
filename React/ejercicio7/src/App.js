@@ -1,5 +1,5 @@
-import Router from './Router';
 import { useState, createContext } from 'react';
+import Router from './Router';
 
 export const GlobalContext = createContext();
 

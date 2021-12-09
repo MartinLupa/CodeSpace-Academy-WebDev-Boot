@@ -1,6 +1,6 @@
 import '../styles/Search.css';
-import { useState, useEffect } from 'react';
 import Card from '../components/Card';
+import { useState, useEffect } from 'react';
 import { GlobalContext } from '../App';
 import { useContext } from 'react';
 

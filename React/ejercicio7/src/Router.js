@@ -19,7 +19,6 @@ export default function Router() {
           <Route path="/details/:id" element={<Details />} />
           <Route path="/search/details/:id" element={<Details />} />
           <Route path="/watchlist/details/:id" element={<Details />} />
-
           <Route path="/watchlist" element={<WatchList />} />
           <Route path="/search" element={<Search />} />
 

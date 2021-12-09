@@ -1,20 +1,17 @@
+import '../styles/Card.css';
 import { useContext } from 'react';
 import { GlobalContext } from '../App';
-import '../styles/Card.css';
+import { useLocation } from 'react-router-dom';
+
 import DetailsBtn from './DetailsBtn';
 import AddBtn from './AddBtn';
 import DeleteBtn from './DeleteBtn';
-import { useLocation } from 'react-router-dom';
 
 export default function Card({ url, title, overview, release, id }) {
   const { movieID, setMovieID, movies, setWatchList, watchList } =
     useContext(GlobalContext);
 
   const location = useLocation();
-
-  // const deleteBtnState = {
-  //   visible: false,
-  // };
 
   return (
     <div className="card">

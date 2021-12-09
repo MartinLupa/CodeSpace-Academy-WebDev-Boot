@@ -1,7 +1,8 @@
 import '../styles/Details.css';
-import { useState, useEffect, useContext } from 'react';
-import { GlobalContext } from '../App';
+import { useState, useContext } from 'react';
 import useFetch from '../hooks/useFetch';
+import { GlobalContext } from '../App';
+
 export default function Details() {
   const [movieDetails, setMovieDetails] = useState([]);
   const { movieID, setWatchList, movies } = useContext(GlobalContext);

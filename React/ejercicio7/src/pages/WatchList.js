@@ -1,8 +1,8 @@
 import '../styles/Main.css';
 import '../styles/WatchList.css';
+import Card from '../components/Card';
 import { GlobalContext } from '../App';
 import { useContext } from 'react';
-import Card from '../components/Card';
 
 export default function WatchList({ deleteBtnState }) {
   const { watchList } = useContext(GlobalContext);
