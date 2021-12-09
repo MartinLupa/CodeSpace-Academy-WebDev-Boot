@@ -5,15 +5,15 @@ import { useContext, useEffect } from 'react';
 
 export default function Main() {
   const { movies, setMovies } = useContext(GlobalContext);
+  const URL = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_MOVIEDB_KEY}&language=en-US&page=1`;
 
+  // useFetch(URL, setMovies, results);
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_MOVIEDB_KEY}&language=en-US&page=1`
-    )
+    fetch(URL)
       .then((response) => response.json())
-      .then((data) => setMovies(data.results));
+      .then((data) => setMovies(data.results))
+      .catch((err) => err);
   });
-  // console.log(process.env.REACT_APP_MOVIEDB_KEY);
 
   return (
     <div className="main-container">

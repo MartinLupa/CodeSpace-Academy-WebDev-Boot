@@ -1,6 +1,7 @@
 import '../styles/Details.css';
 import { useState, useEffect, useContext } from 'react';
 import { GlobalContext } from '../App';
+import useFetch from '../hooks/useFetch';
 export default function Details() {
   const [movieDetails, setMovieDetails] = useState([]);
   const { movieID, setWatchList, movies } = useContext(GlobalContext);
@@ -11,16 +12,9 @@ export default function Details() {
     setWatchList((previousWatchlist) => [...previousWatchlist, movieToAdd[0]]);
   };
 
-  //GET Details /movie/{movie_id}
-  //https://api.themoviedb.org/3/movie/{movie_id}?api_key=58cbd250a252bc05dbeb601a8cddd6e6&language=en-US
-  useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${movieID}?api_key=58cbd250a252bc05dbeb601a8cddd6e6&language=en-US`
-    )
-      .then((response) => response.json())
-      .then((data) => setMovieDetails(data));
-    // .then((data) => console.log(data));
-  }, [movieID]);
+  const URL = `https://api.themoviedb.org/3/movie/${movieID}?api_key=${process.env.REACT_APP_MOVIEDB_KEY}&language=en-US`;
+  useFetch(URL, setMovieDetails);
+
   return (
     <div className="details-container">
       <img

@@ -6,8 +6,8 @@ import { useContext } from 'react';
 
 export default function Search() {
   const [query, setQuery] = useState('');
-  // const [searchedMovies, setSearchedMovies] = useState([]);
   const { movies, setMovies } = useContext(GlobalContext);
+  const URL = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIEDB_KEY}&language=en-US&query=${query}&page=1&include_adult=false`;
 
   const handleQueryChange = (e) => {
     e.preventDefault();
@@ -15,9 +15,7 @@ export default function Search() {
   };
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIEDB_KEY}&language=en-US&query=${query}&page=1&include_adult=false`
-    )
+    fetch(URL)
       .then((response) => response.json())
       .then((data) => setMovies(data.results));
   });
