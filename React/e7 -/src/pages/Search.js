@@ -13,10 +13,10 @@ export default function Search() {
     e.preventDefault();
     setQuery(e.target.value);
   };
-
+  // https://api.themoviedb.org/3/search/movie?api_key=58cbd250a252bc05dbeb601a8cddd6e6&language=en-US&query=venom&page=1&include_adult=false
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIEDB_KEY}&language=en-US&query=${query}&page=1&include_adult=false`
+      `https://api.themoviedb.org/3/search/movie?api_key=58cbd250a252bc05dbeb601a8cddd6e6&language=en-US&query=${query}&page=1&include_adult=false`
     )
       .then((response) => response.json())
       .then((data) => setMovies(data.results));

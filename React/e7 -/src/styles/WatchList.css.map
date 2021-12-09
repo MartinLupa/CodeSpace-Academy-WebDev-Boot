@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,oBAAoB,CAAC;EACnB,UAAU,EAAE,KAAK;EACjB,UAAU,EAAE,MAAM;EAClB,UAAU,EAAE,IAAI;CACjB",
+    "mappings": "",
     "sources": [
         "WatchList.scss"
     ],

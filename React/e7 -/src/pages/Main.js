@@ -6,14 +6,14 @@ import { useContext, useEffect } from 'react';
 export default function Main() {
   const { movies, setMovies } = useContext(GlobalContext);
 
+  // https://api.themoviedb.org/3/movie/popular?api_key=58cbd250a252bc05dbeb601a8cddd6e6&language=en-US&page=1
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_MOVIEDB_KEY}&language=en-US&page=1`
+      'https://api.themoviedb.org/3/movie/popular?api_key=58cbd250a252bc05dbeb601a8cddd6e6&language=en-US&page=1'
     )
       .then((response) => response.json())
       .then((data) => setMovies(data.results));
   });
-  // console.log(process.env.REACT_APP_MOVIEDB_KEY);
 
   return (
     <div className="main-container">
