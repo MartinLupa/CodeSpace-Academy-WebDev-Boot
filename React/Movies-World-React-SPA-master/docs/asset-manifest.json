@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Movies-World-React-SPA/static/css/main.64f2bb4b.chunk.css",
+    "main.js": "/Movies-World-React-SPA/static/js/main.5173a162.chunk.js",
+    "main.js.map": "/Movies-World-React-SPA/static/js/main.5173a162.chunk.js.map",
+    "runtime-main.js": "/Movies-World-React-SPA/static/js/runtime-main.8f03dc84.js",
+    "runtime-main.js.map": "/Movies-World-React-SPA/static/js/runtime-main.8f03dc84.js.map",
+    "static/css/2.0a9ec390.chunk.css": "/Movies-World-React-SPA/static/css/2.0a9ec390.chunk.css",
+    "static/js/2.b5993af5.chunk.js": "/Movies-World-React-SPA/static/js/2.b5993af5.chunk.js",
+    "static/js/2.b5993af5.chunk.js.map": "/Movies-World-React-SPA/static/js/2.b5993af5.chunk.js.map",
+    "index.html": "/Movies-World-React-SPA/index.html",
+    "static/css/2.0a9ec390.chunk.css.map": "/Movies-World-React-SPA/static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.64f2bb4b.chunk.css.map": "/Movies-World-React-SPA/static/css/main.64f2bb4b.chunk.css.map",
+    "static/js/2.b5993af5.chunk.js.LICENSE.txt": "/Movies-World-React-SPA/static/js/2.b5993af5.chunk.js.LICENSE.txt",
+    "static/media/MartinL1.89bfbfad.JPG": "/Movies-World-React-SPA/static/media/MartinL1.89bfbfad.JPG",
+    "static/media/Error.css": "/Movies-World-React-SPA/static/media/errorpageimage.1783d2d4.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f03dc84.js",
+    "static/css/2.0a9ec390.chunk.css",
+    "static/js/2.b5993af5.chunk.js",
+    "static/css/main.64f2bb4b.chunk.css",
+    "static/js/main.5173a162.chunk.js"
+  ]
+}

@@ -1,0 +1,29 @@
+.contact-container {
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 30px;
+  min-height: 100vh;
+}
+
+.text-container {
+  line-height: 1.7;
+  margin: 40px;
+}
+
+.image {
+  width: 350px;
+  height: 350px;
+  margin: 40px auto;
+}
+
+@media only screen and (max-width: 1020px) {
+  .contact-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=Contact.css.map */
