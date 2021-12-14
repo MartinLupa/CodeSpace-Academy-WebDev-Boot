@@ -1,7 +1,8 @@
 import "../styles/Details.css";
 import { BASE_URL, IMG_PATH } from "../settings";
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import { GlobalContext } from "../App";
+import { useFetch } from "../hooks/useFetch";
 
 export default function Details() {
   const [movieDetails, setMovieDetails] = useState([]);
@@ -15,12 +16,7 @@ export default function Details() {
   };
 
   const URL = `${BASE_URL}/movie/${movieID}?api_key=${process.env.REACT_APP_MOVIEDB_KEY}&language=en-US`;
-  useEffect(() => {
-    fetch(URL)
-      .then((response) => response.json())
-      .then((data) => setMovieDetails(data))
-      .catch((err) => err);
-  });
+  useFetch(URL, setMovieDetails);
 
   return (
     <div className="details-container">
