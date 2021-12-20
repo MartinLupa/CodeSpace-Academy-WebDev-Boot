@@ -1,0 +1,17 @@
+CREATE TABLE login (
+    id iNT NOT NULL AUTO_INCREMENT UNIQUE,
+    user_id INT UNSIGNED NOT NULL,
+    email VARCHAR(30) NOT NULL UNIQUE,
+    password  VARCHAR(64) NOT NULL, 
+    PRIMARY KEY (id),
+    FOREIGN KEY(user_id) REFERENCES users(id)
+) ENGINE=InnoDB CHARSET=utf8 COLLATE=utf8_general_ci;
+
+CREATE TABLE users (
+    id MEDIUMINT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    surname VARCHAR(30) NOT NULL,
+    birth_date DATE NOT NULL DEFAULT '2000-01-01',
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARSET=utf8 COLLATE=utf8_general_ci;
+
